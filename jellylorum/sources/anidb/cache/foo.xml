@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<anime id="6468" restricted="true">
+<type>OVA</type>
+<episodecount>1</episodecount>
+<startdate>1987</startdate>
+<enddate>1987</enddate>
+<titles>
+<title xml:lang="x-jat" type="main">Kaguya-hime: Taketori Monogatari</title>
+<title xml:lang="ja" type="official">かぐや姫 竹取物語</title>
+</titles>
+<description>An erotic version of the classical Japanese folktale "The Tale of the Bamboo Cutter", produced by Tokyo Studio.</description>
+<ratings>
+<permanent count="5">6.57</permanent>
+</ratings>
+<picture>22103.jpg</picture>
+<categories>
+<category id="61" parentid="318" hentai="true" weight="500">
+<name>Virgins</name>
+<description>A virgin is someone who yet hasn`t had any sex (has not been penetrated, to be exact), but that`s not enough for this category to be added. Add this category if a female loses her virginity and you`ll know this either because she admits of being a virgin or admits of losing her virginity and/or there`s blood coming out of her vagina.&#13;
+&#13;
+Exclusive to hentai only. Obviously only applies to females.</description>
+</category>
+<category id="10" parentid="6" hentai="false" weight="600">
+<name>Past</name>
+<description>Anime that takes place in the past or clearly seems to take place in the past in case of an alternative universe. This category should almost always go together with one of its sub-categories, because the past can either be a depiction of a historical event(s) or not, in which case it would be alternative past.</description>
+</category>
+<category id="25" parentid="10" hentai="false" weight="600">
+<name>Historical</name>
+<description>Historical anime have clear ties to our history and usually occur in a particular epoch.</description>
+</category>
+<category id="23" parentid="22" hentai="false" weight="600">
+<name>Japan</name>
+<description>Last stronghold for humanity, if Tokyo falls, it`s all over. Tokyo tower will undoubtedly fall anyway.</description>
+</category>
+<category id="80" parentid="3" hentai="true" weight="600">
+<name>18 Restricted</name>
+<description>This isn`t really an "Audience".&#13;
+&#13;
+While some anime might feature sexual content they still might not be porn. Only use it when the content is clearly *not* intended for minors.</description>
+</category>
+<category id="86" parentid="83" hentai="false" weight="600">
+<name>Sex</name>
+<description>Known as intercourse, the ultimate bond of love.</description>
+</category>
+<category id="88" parentid="83" hentai="false" weight="600">
+<name>Nudity</name>
+<description>Nudity is the state of wearing no clothing. Based on scientific research it is estimated that humans have been wearing clothing for 650,000 years. It is related to the concept of modesty and is sometimes used to refer to wearing significantly less clothing than expected by the conventions of a particular culture and situation, and in particular exposing the bare skin or intimate parts. &#13;
+&#13;
+Especially gracious fanservice shows tend to show their, mostly female, characters, most often without any clothes, only hiding genitals through the means of additions like steam.</description>
+</category>
+</categories>
+<episodes>
+<episode id="98419" update="2009-04-01">
+<epno>1</epno>
+<length>30</length>
+<title xml:lang="en">OVA</title>
+</episode>
+</episodes>
+</anime>
