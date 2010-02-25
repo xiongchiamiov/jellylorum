@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<anime id="6466" restricted="false">
+<type>TV Series</type>
+<episodecount>24</episodecount>
+<startdate>2009-10-07</startdate>
+<titles>
+<title xml:lang="x-jat" type="main">Kimi ni Todoke</title>
+<title xml:lang="en" type="syn">Reaching You</title>
+<title xml:lang="en" type="syn">Reach You</title>
+<title xml:lang="ru" type="syn">Достучаться до тебя</title>
+<title xml:lang="ru" type="syn">Дотянуться до тебя</title>
+<title xml:lang="ar" type="syn">لأصل إليك</title>
+<title xml:lang="el" type="syn">Από μένα για σένα</title>
+<title xml:lang="lt" type="syn">Pasiekti Tave</title>
+<title xml:lang="tr" type="syn">Sana Ulaşmak</title>
+<title xml:lang="zh-Hans" type="syn">好想告诉你</title>
+<title xml:lang="en" type="short">KimiTodo</title>
+<title xml:lang="x-jat" type="short">Todoke</title>
+<title xml:lang="x-jat" type="short">knt</title>
+<title xml:lang="ja" type="official">君に届け</title>
+<title xml:lang="ko" type="official">너에게 닿기를</title>
+</titles>
+<url>http://www.ntv.co.jp/kiminitodoke/</url>
+<creators>
+<name id="3755" type="Character Design">Shibata Yuka</name>
+<name id="7047" type="Direction">Kaburaki Hiro</name>
+<name id="7048" type="Original Work">Shiina Karuho</name>
+<name id="3501" type="Series Composition">Konparu Tomoko</name>
+<name id="3755" type="Chief Animation Direction">Shibata Yuka</name>
+<name id="721" type="Work">Production I.G</name>
+<name id="9933" type="Music">S.E.N.S. Project</name>
+</creators>
+<description>* Based on a shoujo manga by Shiina Karuho, serialised in Bessatsu Margaret.
+Kuronuma Sawako is the perfect heroine... for a horror movie. With her jet-black hair, sinister smile and silent demeanor, she`s often mistaken for the haunting movie character Sadako. But behind her scary facade is a very misunderstood teenager. Too shy to fit in, all she wants to do is make some friends. But when a popular boy in class befriends her, she`s sure to make more than just that--she`s about to make some enemies too! 
+Source: Manga-Updates</description>
+<ratings>
+<temporary count="652">8.96</temporary>
+</ratings>
+<picture>36203.jpg</picture>
+<categories>
+<category id="198" parentid="313" hentai="false" weight="400">
+<name>Romance</name>
+<description>Romance describes a story that deals with love between two or more characters typically also having an optimistic ending.</description>
+</category>
+<category id="252" parentid="313" hentai="false" weight="600">
+<name>Angst</name>
+<description>A feeling of general discomfort and uneasiness is present due to either trivial or more serious reasons, often accompanied by depression.</description>
+</category>
+<category id="236" parentid="317" hentai="false" weight="500">
+<name>Daily Life</name>
+<description>The antics of the protagonists do not take place in some exotic setting or time, but in everyday life. When not "at the job" this means getting up in the morning, making meals, house cleaning, going shopping or out to eat, visiting the bath house or spa, leisure activities in the spare time, etc. The time "on the job" for students is School Life, for others working in their profession. Daily Life is basically a synonym for everything normal, repetitive, and trivial happening to your average person.</description>
+</category>
+<category id="330" parentid="317" hentai="false" weight="600">
+<name>Coming of Age</name>
+<description>In the strict sense the Coming of age describes a young person`s transition from adolescence to adulthood. In anime the term is used in a more general sense where the protagonists have to face a challenge, make an important decision in their life, take on responsibility, or learn a lesson, and by overcoming these obstacles they reach a higher level of maturity.</description>
+</category>
+<category id="289" parentid="7" hentai="false" weight="600">
+<name>Earth</name>
+<description>That big mud ball that most of us live on.</description>
+</category>
+<category id="22" parentid="289" hentai="false" weight="600">
+<name>Asia</name>
+<description>Asia is the world`s largest and most populous continent.</description>
+</category>
+<category id="77" parentid="3" hentai="false" weight="600">
+<name>Shoujo</name>
+<description>A style of anime and manga intended for girls which may have some crossover appeal to boys as well.</description>
+</category>
+<category id="342" parentid="17" hentai="false" weight="300">
+<name>Super Deformed</name>
+<description>A caricature style often seen in anime when the character shows extreme emotions, like fear, anger, happiness, surprise, or shame. Seen as cute, as part of humorous comedy. The character`s face suddenly turns into a simplified version, the body will usually also deform into that of a small child (oversized head, short limbs, extra-large tears).</description>
+</category>
+<category id="17" parentid="313" hentai="false" weight="300">
+<name>Comedy</name>
+<description>Anime whose central struggle causes hilarious results. These stories are built upon funny characters, situations and events. A comedy anime is laced with humour and sets out to provoke laughter from the audience.&#13;
+&#13;
+Japanese humour can be a bit strange to westerners, so if you`re new to this type of humour, just bear with it; it`ll most likely grow on you if you`re a fan of other kinds of comedy.</description>
+</category>
+<category id="273" parentid="268" hentai="false" weight="600">
+<name>Manga</name>
+<description>Manga is the lifeblood that drives the anime industry. Everything and its mother is based on manga. However! There are exceptions where the manga was not the basis for the anime.
+It`s common practice to make manga adaptations of many popular anime, there`s a manga based on Evangelion, and two (one shounen and one shoujo) based on each of Escaflowne and Mahou Tsukai Tai. Also it`s quite common to release manga and anime versions of a story in parallel, for instance Nadesico and Shoujo Kakumei Utena.</description>
+</category>
+<category id="239" parentid="21" hentai="false" weight="600">
+<name>High School</name>
+<description>The upper-secondary education (not compulsory in Japan) covers the grades ten, eleven, and twelve. The students are typically fifteen to eighteen years old.&#13;
+&#13;
+Anime centre on High School settings predominately: Plot/story-wise the coming of age is of interest - the students are almost adults (their bodies have matured, see ecchi anime) with more earnest, real-life problems.</description>
+</category>
+<category id="23" parentid="22" hentai="false" weight="600">
+<name>Japan</name>
+<description>Last stronghold for humanity, if Tokyo falls, it`s all over. Tokyo tower will undoubtedly fall anyway.</description>
+</category>
+<category id="11" parentid="6" hentai="false" weight="600">
+<name>Present</name>
+<description>Somewhere between past and future</description>
+</category>
+</categories>
+<tags>
+<tag id="4829" approval="3" spoiler="false" localspoiler="false" globalspoiler="false" update="2009-04-18">
+<name>confession</name>
+<count>13</count>
+<description>Someone confesses his/her love to someone else.
+In a school setting it will usually be a boy confessing his love to a girl, though the more modern Japanese girls in anime will do quite a bit of confessing as well.
+Since this is anime, girl/girl (shoujo ai) or boy/boy (shounen ai) confessions also happen.</description>
+</tag>
+<tag id="1616" approval="3" spoiler="false" localspoiler="false" globalspoiler="false" update="2009-06-24">
+<name>emotionally moving</name>
+<count>16</count>
+<description>Story, setting, and character development / interaction will move the viewer emotionally. Also see "tear jerker".</description>
+</tag>
+<tag id="5457" approval="3" spoiler="false" localspoiler="false" globalspoiler="false" update="2010-02-01">
+<name>feel good</name>
+<count>3</count>
+<description>The kind of anime which leaves you with a warm feeling inside and you can`t stop smiling while watching it.</description>
+</tag>
+<tag id="1136" approval="8" spoiler="false" localspoiler="false" globalspoiler="false" update="2009-06-27">
+<name>great opening</name>
+<count>119</count>
+<description>This anime contains a wonderful use of animation and/or vocals during the opening theme.</description>
+</tag>
+<tag id="2879" approval="8" spoiler="false" localspoiler="false" globalspoiler="true" update="2009-05-24">
+<name>gossip</name>
+<count>4</count>
+</tag>
+<tag id="2517" approval="16" spoiler="false" localspoiler="false" globalspoiler="false" update="2008-10-12">
+<name>unfoundedly feared character</name>
+<count>12</count>
+<description>Due to some strange misunderstanding, or some other unfounded reason the character in the anime is feared by his contemporaries.
+Example: A male student with an "evil eye" is mistaken for a delinquent, and thus feared by the students in his class.</description>
+</tag>
+<tag id="5508" approval="5" spoiler="false" localspoiler="false" globalspoiler="false" update="2010-02-11">
+<name>female main character</name>
+<count>77</count>
+<description>The main character is in possession of a vagina</description>
+</tag>
+<tag id="35" approval="7" spoiler="false" localspoiler="false" globalspoiler="false" update="2007-07-28">
+<name>awesome animation</name>
+<count>112</count>
+<description>Describes the style of an animation production that deems itself respectfully noteworthy for its impressive uniqueness of appearance and attention, emphasis, or exaggeration to all or specific characteristics, constructions and details that make it so recognizable.</description>
+</tag>
+<tag id="755" approval="6" spoiler="false" localspoiler="false" globalspoiler="false" update="2008-06-07">
+<name>makes you laugh and cry</name>
+<count>20</count>
+<description>While watching this series you can expect moments when you fall off your chair laughing, and moments when you will be thankful that there is a pack of tissues nearby. It`s worth mentioning that tears can be caused by touching/drama moments (ex. Clannad, Hanada Shounen Shi) or "mighty"/overwhelming moments (One Piece).</description>
+</tag>
+<tag id="1852" approval="22" spoiler="false" localspoiler="false" globalspoiler="false" update="2009-06-08">
+<name>funny expressions</name>
+<count>36</count>
+<description>The facial expressions of the characters may change so quickly or unexpectedly distorted that hilarity will ensue.</description>
+</tag>
+<tag id="57" approval="2" spoiler="false" localspoiler="false" globalspoiler="false" update="2009-09-26">
+<name>Christmas</name>
+<count>79</count>
+<description>This anime is about Christmas or has an episode relating to Christmas.</description>
+</tag>
+<tag id="663" approval="31" spoiler="false" localspoiler="false" globalspoiler="false" update="2010-02-24">
+<name>heart-warming</name>
+<count>60</count>
+<description>The story and its characters give off good vibes - includes elevated feelings of affection such as tenderness, sympathy and love, all in one package.</description>
+</tag>
+<tag id="2299" approval="11" spoiler="false" localspoiler="false" globalspoiler="false" update="2009-10-16">
+<name>great emotional realism</name>
+<count>8</count>
+<description>Where the series portrays emotions so vividly, that the audience feels them also.</description>
+</tag>
+<tag id="1326" approval="2" spoiler="false" localspoiler="false" globalspoiler="false" update="2008-07-02">
+<name>great OP and ED</name>
+<count>70</count>
+<description>The OP (opening) and ED (ending) sequences contain a strong sense of effort toward impressively utilizing visuals, instrumentals and vocals to captivate an audience.
+This has nothing to do with any karaoke effects and styling individual subbers may have added.</description>
+</tag>
+<tag id="1235" approval="14" spoiler="false" localspoiler="false" globalspoiler="false" update="2009-12-08">
+<name>great ED</name>
+<count>100</count>
+</tag>
+<tag id="2980" approval="13" spoiler="false" localspoiler="false" globalspoiler="false" update="2009-06-24">
+<name>tear jerker</name>
+<count>20</count>
+<description>Parts of the anime are so emotionally moving or sad that they bring tears to your eyes.</description>
+</tag>
+<tag id="3072" approval="16" spoiler="false" localspoiler="false" globalspoiler="false" update="2008-11-07">
+<name>unique main character</name>
+<count>4</count>
+</tag>
+<tag id="765" approval="18" spoiler="false" localspoiler="false" globalspoiler="false" update="2008-06-07">
+<name>friendship</name>
+<count>57</count>
+<description>The feeling of trust, kindness, and friendship between a group of high school students for example, is a central theme of this anime.</description>
+</tag>
+<tag id="510" approval="5" spoiler="false" localspoiler="false" globalspoiler="false" update="2009-06-17">
+<name>emotionally engaging style</name>
+<count>39</count>
+<description>The style in this anime "touches the heart" by using nice sunny settings, beautiful nature views, e.g. sakura trees, and the camera shots are all slightly misted, giving the scenes a level of softness. To complete the picture the story is heart-wrenching and tear-jerking.</description>
+</tag>
+</tags>
+<characters>
+<character id="12185" type="appears in" update="2010-02-10">
+<name>Arai Yoshiyuki</name>
+<episodes>108989,109183</episodes>
+<picture>36904.jpg</picture>
+</character>
+<character id="12186" type="appears in" update="2009-10-22">
+<name>Endou Tomomi</name>
+<episodes>112986,112985,111898,111219,110520,111402,111403,110961,112441,110803,111401,112002,108989,112001</episodes>
+<picture>37557.jpg</picture>
+</character>
+<character id="12187" type="appears in" update="2009-10-22">
+<name>Hirano Eriko</name>
+<episodes>112986,112985,111898,111219,110520,111402,111403,110961,112441,110803,111401,112002,108989,112001</episodes>
+<picture>37559.jpg</picture>
+</character>
+<character id="12188" type="appears in" update="2009-10-22">
+<name>Jounouchi Souichi</name>
+<description>One of Sawako`s classmates, easily swayed by other people. He generally appears in the background. At one point, he is rejected after confessing to a girl he liked and is comforted by Kazehaya.</description>
+<episodes>112983,111898,111219,110520,111402,111403,116359,108989,109183,110803,111401,112002,110961</episodes>
+</character>
+<character id="12189" type="appears in" update="2009-10-08">
+<name>Shino</name>
+<episodes>112986,111219,110803,108989</episodes>
+<picture>36905.jpg</picture>
+</character>
+<character id="12190" type="appears in" update="2009-10-08">
+<name>Sawako no Haha</name>
+<episodes>112984,111898,111327,116359,108989,110803,110961</episodes>
+<picture>36907.jpg</picture>
+</character>
+<character id="12191" type="appears in" update="2009-11-19">
+<name>Sawako no Chichi</name>
+<episodes>112984,111898,111327,116359,108989,110803,110961</episodes>
+<picture>36908.jpg</picture>
+</character>
+<character id="12405" type="appears in" update="2009-10-19">
+<name>Maru</name>
+<episodes>112984,112985,110520,109183,111403</episodes>
+<picture>37439.jpg</picture>
+</character>
+<character id="12442" type="appears in" update="2009-10-22">
+<rating votes="1">5.17</rating>
+<name>Kurumizawa Ume</name>
+<description>A girl who appears friendly and sweet to everyone around her, she has had a huge crush on Kazehaya since their first year of middle school. She dislikes her given name, Ume, because it sounds old-fashioned and prefers to be called her nickname, "Kurumi." She is extremely jealous of Sawako, which led her to spread fake rumours of Sawako`s only friends at the time, Yoshida and Yano, using Sawako`s name. Kurumi does not attend the same class as Sawako or Kazehaya.
+She eventually confesses her love to Kazehaya, but receives an expected rejection. Because she is always surprised with Sawako`s naiveté, Kurumi is able to become friends with her, as well as a rival for Kazehaya`s affection. Following Kazehaya`s rejection, she becomes colder to her classmates, but is able to finally express her true feelings and personality.</description>
+<episodes>112986,112985,111898,111219,110520,109183,111402,111403,112441,111401,112002,112001</episodes>
+<picture>37556.jpg</picture>
+</character>
+<character id="12937" type="appears in" update="2009-11-12">
+<name>Yuka</name>
+<episodes>112985,111219,110961</episodes>
+<picture>38670.jpg</picture>
+</character>
+<character id="13166" type="appears in" update="2009-11-20">
+<name>Sanada Genji</name>
+<episodes>112983,111327</episodes>
+<picture>39066.jpg</picture>
+</character>
+<character id="13167" type="appears in" update="2009-11-20">
+<name>Kazehaya Touta</name>
+<episodes>111327</episodes>
+<picture>39067.jpg</picture>
+</character>
+<character id="11135" type="main character in" update="2009-08-12">
+<rating votes="13">7.44</rating>
+<name>Kuronuma Sawako</name>
+<description>Sawako is a shy yet honest girl who is in search of friendship, but her resemblance to horror film character Sadako and Sawako`s tendency to shy away from correcting people of misconceptions prevent her from doing so. Thanks to Kazehaya`s kind and open nature, she is able to gradually make friends, open up to her classmates, and talk to different people. She is grateful (and at first, worships) Kazehaya for giving her the opportunities to make close friends, which come to include Yano, Yoshida, Kazehaya and Ryuu.</description>
+<episodes>112983,112984,112986,112985,111898,111327,111219,110520,111402,111403,116359,108989,109183,110803,111401,112002,112001,112441,110961</episodes>
+<picture>33075.jpg</picture>
+</character>
+<character id="11136" type="main character in" update="2009-08-12">
+<rating votes="3">8.38</rating>
+<name>Kazehaya Shouta</name>
+<description>Kazehaya is Sawako`s outgoing and friendly classmate. He is so popular that during middle school, so many girls liked him that they formed a "Kazehaya is Everyone`s" Alliance in order to maintain some level of peace among his admirers and more than half of these girls now attend the same high school. Kazehaya has held a long standing interest in Sawako and admits (though not to Sawako) that he likes her, unaware that she feels the same for him.</description>
+<episodes>112983,112984,112986,112985,111898,111327,111219,110520,111402,111403,116359,108989,109183,110803,111401,112002,112001,112441,110961</episodes>
+<picture>33076.jpg</picture>
+</character>
+<character id="11137" type="secondary cast in" update="2009-08-12">
+<rating votes="2">6.66</rating>
+<name>Yoshida Chizuru</name>
+<description>Yoshida is another close friend of Sawako. She is the tomboy of the group. She has a soft spot for innocent mannered people, so she takes a near instant liking to Sawako. In Kurumi`s fake rumours it was passed around that she was a former Yankee, though Chizuru just takes the rumour as a means of scaring people off or as a joke for her friends. Chizuru is mostly only the slower side of things; she did not realise that Kazehaya liked Sawako until late in the series, after they started their second year of high school. 
+She is a close childhood friend with Sanada Ryu, who is also the son of her favourite ramen shop`s owner, and went to the same middle school as Kazehaya. She has a crush on Ryu`s brother, Tooru.</description>
+<episodes>112983,112984,112986,112985,111898,111327,111219,110520,111402,111403,116359,108989,109183,110803,111401,112002,112001,112441,110961</episodes>
+<picture>33077.jpg</picture>
+</character>
+<character id="11138" type="secondary cast in" update="2009-08-12">
+<rating votes="2">7.44</rating>
+<name>Yano Ayane</name>
+<description>Ayane is a close friend of Sawako. She is the arguably the most mature of the group and she has a boyfriend in college. In Kurumi`s fake rumours, it is said that Ayane has played more with more than 100 guys in middle school. In their current high school, it is being said that Yano and Yoshida have pretty much authority in the year group. Perceptive and intelligent, a trait of Ayane`s personality is that she gives just enough information to leave others wondering, thus forcing them to move forward. Although she is usually calm and collected, she is easily infuriated if someone hurts Sawako and does not hesitate to attack the one responsible she believes is responsible (frequently Kazehaya) with kicks and sharp words.</description>
+<episodes>112983,112984,112986,112985,111898,111327,111219,110520,111402,111403,116359,108989,109183,110803,111401,112002,112001,112441,110961</episodes>
+<picture>33078.jpg</picture>
+</character>
+<character id="11139" type="secondary cast in" update="2009-08-12">
+<rating votes="2">7.41</rating>
+<name>Sanada Ryuu</name>
+<description>Ryuu is also member of Sawako`s group of friends. He is quiet most of the time and rarely talks, but still can communicate well with Sawako, as they both don`t talk much anyway. He is a close childhood friend with Chizuru and does not deny having feelings for her. Ryuu and Kazehaya became friends when they were on the baseball team during middle school.</description>
+<episodes>112983,112984,112985,111898,111327,111219,110520,111402,116359,108989,109183,110803,111401,112002,112001,110961</episodes>
+<picture>33079.jpg</picture>
+</character>
+<character id="12441" type="secondary cast in" update="2009-10-22">
+<rating votes="3">6.43</rating>
+<name>Arai Kazuichi</name>
+<description>The temporarily homeroom teacher for Sawako`s class, taking over when the previous homeroom teacher became sick during the summer holidays while Sawako was helping him. He is nicknamed Pin and always is called that way, except Sawako who obeys the formalities and still calls him Arai-sensei. Pin is a great fan of baseball as well as the school baseball team`s coach. He used to be part of Kazehaya`s father`s league team, so he has known Shouta since when he was young. A loud and eccentric man prone to believing the silliest things, Pin apparently enjoys interrupting people. He had nicknamed the puppy that Sawako and Kazehaya found by the river "Pedro Martinez" after the legendary baseball pitcher.</description>
+<episodes>112984,112986,112985,111898,111327,111219,110520,111402,112441,110803,111401,112002,112001,110961</episodes>
+<picture>37555.jpg</picture>
+</character>
+</characters>
+<episodes>
+<episode id="108843" update="2009-09-29">
+<epno>T1</epno>
+<length>2</length>
+<airdate>2009-09-29</airdate>
+<title xml:lang="en">Preview</title>
+</episode>
+<episode id="108989" update="2009-10-01">
+<epno>1</epno>
+<length>25</length>
+<airdate>2009-10-07</airdate>
+<rating votes="13">8.52</rating>
+<title xml:lang="ja">プロローグ</title>
+<title xml:lang="en">Prologue</title>
+<title xml:lang="x-jat">Prologue</title>
+</episode>
+<episode id="109183" update="2009-10-07">
+<epno>2</epno>
+<length>25</length>
+<airdate>2009-10-14</airdate>
+<rating votes="11">8.63</rating>
+<title xml:lang="ja">席替え</title>
+<title xml:lang="en">Seat Change</title>
+<title xml:lang="x-jat">Seki Kae</title>
+</episode>
+<episode id="109207" update="2009-10-08">
+<epno>C1</epno>
+<length>2</length>
+<airdate>2009-10-07</airdate>
+<rating votes="1">7.47</rating>
+<title xml:lang="en">Opening</title>
+</episode>
+<episode id="109208" update="2009-10-08">
+<epno>C2</epno>
+<length>2</length>
+<airdate>2009-10-07</airdate>
+<rating votes="1">9.16</rating>
+<title xml:lang="en">Ending</title>
+</episode>
+<episode id="110520" update="2009-10-14">
+<epno>3</epno>
+<length>25</length>
+<airdate>2009-10-21</airdate>
+<rating votes="11">7.83</rating>
+<title xml:lang="ja">放課後</title>
+<title xml:lang="en">After School</title>
+<title xml:lang="x-jat">Houkago</title>
+</episode>
+<episode id="110803" update="2009-10-21">
+<epno>4</epno>
+<length>25</length>
+<airdate>2009-10-28</airdate>
+<rating votes="11">8.75</rating>
+<title xml:lang="ja">噂</title>
+<title xml:lang="en">Rumors</title>
+<title xml:lang="x-jat">Uwasa</title>
+</episode>
+<episode id="110961" update="2009-10-28">
+<epno>5</epno>
+<length>25</length>
+<airdate>2009-11-04</airdate>
+<rating votes="9">8.34</rating>
+<title xml:lang="ja">決意</title>
+<title xml:lang="en">Determination</title>
+<title xml:lang="x-jat">Ketsui</title>
+</episode>
+<episode id="111219" update="2009-11-04">
+<epno>6</epno>
+<length>25</length>
+<airdate>2009-11-11</airdate>
+<rating votes="9">8.64</rating>
+<title xml:lang="ja">友達</title>
+<title xml:lang="en">Friends</title>
+<title xml:lang="x-jat">Tomodachi</title>
+</episode>
+<episode id="111327" update="2009-11-11">
+<epno>7</epno>
+<length>25</length>
+<airdate>2009-11-18</airdate>
+<rating votes="8">8.96</rating>
+<title xml:lang="ja">土曜の夜</title>
+<title xml:lang="en">Saturday Evening</title>
+<title xml:lang="x-jat">Doyou no yoru</title>
+</episode>
+<episode id="111401" update="2009-11-13">
+<epno>8</epno>
+<length>25</length>
+<airdate>2009-11-25</airdate>
+<rating votes="8">8.45</rating>
+<title xml:lang="ja">自主練</title>
+<title xml:lang="en">Free Practice</title>
+<title xml:lang="x-jat">Jishuren</title>
+</episode>
+<episode id="111402" update="2009-11-13">
+<epno>9</epno>
+<length>25</length>
+<airdate>2009-12-02</airdate>
+<rating votes="9">8.69</rating>
+<title xml:lang="ja">新しい友達</title>
+<title xml:lang="en">New Friend</title>
+<title xml:lang="x-jat">Atarashii Tomodachi</title>
+</episode>
+<episode id="111403" update="2009-11-13">
+<epno>10</epno>
+<length>25</length>
+<airdate>2009-12-09</airdate>
+<rating votes="8">8.18</rating>
+<title xml:lang="ja">協力</title>
+<title xml:lang="en">Collaboration</title>
+<title xml:lang="x-jat">Kyouryoku</title>
+</episode>
+<episode id="111898" update="2009-12-09">
+<epno>11</epno>
+<length>25</length>
+<airdate>2009-12-16</airdate>
+<rating votes="9">8.84</rating>
+<title xml:lang="ja">とくべつ？</title>
+<title xml:lang="en">Special?</title>
+<title xml:lang="x-jat">Tokubetsu?</title>
+</episode>
+<episode id="112001" update="2009-12-11">
+<epno>13</epno>
+<length>25</length>
+<airdate>2010-01-06</airdate>
+<rating votes="7">9.23</rating>
+<title xml:lang="ja">恋</title>
+<title xml:lang="en">Love</title>
+<title xml:lang="x-jat">Koi</title>
+</episode>
+<episode id="112002" update="2009-12-11">
+<epno>12</epno>
+<length>25</length>
+<airdate>2009-12-23</airdate>
+<rating votes="8">9.03</rating>
+<title xml:lang="ja">恋愛感情</title>
+<title xml:lang="en">Romantic Feelings</title>
+<title xml:lang="x-jat">Ren`ai Kanjou</title>
+</episode>
+<episode id="112441" update="2010-01-05">
+<epno>14</epno>
+<length>25</length>
+<airdate>2010-01-13</airdate>
+<rating votes="7">8.23</rating>
+<title xml:lang="ja">くるみ</title>
+<title xml:lang="en">Kurumi</title>
+<title xml:lang="x-jat">Kurumi</title>
+</episode>
+<episode id="112983" update="2010-01-11">
+<epno>18</epno>
+<length>25</length>
+<airdate>2010-02-10</airdate>
+<rating votes="6">7.23</rating>
+<title xml:lang="ja">千鶴の恋</title>
+<title xml:lang="en">Chizuru`s Love</title>
+<title xml:lang="x-jat">Chizuru no Koi</title>
+</episode>
+<episode id="112984" update="2010-01-11">
+<epno>17</epno>
+<length>25</length>
+<airdate>2010-02-03</airdate>
+<rating votes="7">8.89</rating>
+<title xml:lang="ja">休日</title>
+<title xml:lang="en">Holiday</title>
+<title xml:lang="x-jat">Kyuujitsu</title>
+</episode>
+<episode id="112985" recap="true" update="2010-01-11">
+<epno>16</epno>
+<length>25</length>
+<airdate>2010-01-27</airdate>
+<rating votes="8">5.86</rating>
+<title xml:lang="ja">夜噺</title>
+<title xml:lang="en">Night Story</title>
+<title xml:lang="x-jat">Yobanashi</title>
+</episode>
+<episode id="112986" update="2010-01-11">
+<epno>15</epno>
+<length>25</length>
+<airdate>2010-01-20</airdate>
+<rating votes="7">9.28</rating>
+<title xml:lang="ja">ライバル</title>
+<title xml:lang="en">Rival</title>
+<title xml:lang="x-jat">Rival</title>
+</episode>
+<episode id="116359" update="2010-02-10">
+<epno>19</epno>
+<length>25</length>
+<airdate>2010-02-17</airdate>
+<rating votes="5">7.76</rating>
+<title xml:lang="ja">夢</title>
+<title xml:lang="en">Dream</title>
+<title xml:lang="x-jat">Yume</title>
+</episode>
+<episode id="116377" update="2010-02-10">
+<epno>23</epno>
+<length>25</length>
+<airdate>2010-03-17</airdate>
+<title xml:lang="en">Episode 23</title>
+</episode>
+<episode id="116378" update="2010-02-10">
+<epno>22</epno>
+<length>25</length>
+<airdate>2010-03-10</airdate>
+<title xml:lang="ja">クリスマス</title>
+<title xml:lang="en">Christmas</title>
+<title xml:lang="x-jat">Christmas</title>
+</episode>
+<episode id="116379" update="2010-02-10">
+<epno>21</epno>
+<length>25</length>
+<airdate>2010-03-03</airdate>
+<title xml:lang="ja">初雪</title>
+<title xml:lang="en">First Snow</title>
+<title xml:lang="x-jat">Hatsuyuki</title>
+</episode>
+<episode id="116380" update="2010-02-10">
+<epno>20</epno>
+<length>25</length>
+<airdate>2010-02-24</airdate>
+<rating votes="2">8.27</rating>
+<title xml:lang="ja">プレゼント</title>
+<title xml:lang="en">Present</title>
+<title xml:lang="x-jat">Present</title>
+</episode>
+<episode id="116431" update="2010-02-13">
+<epno>24</epno>
+<length>25</length>
+<airdate>2010-03-24</airdate>
+<title xml:lang="en">Episode 24</title>
+</episode>
+</episodes>
+</anime>

@@ -1,6 +1,13 @@
 require 'rubygems'
 require 'sinatra'
 require 'liquid'
+require 'dm-core'
+require 'models/anidb'
+
+# setup stuff
+DataMapper::Logger.new($stdout, :debug)
+DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/sqlite.db")
+DataMapper.auto_migrate!
 
 $file_system = Liquid::LocalFileSystem.new("views")
 $templates = {}
