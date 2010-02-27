@@ -6,8 +6,8 @@ require 'models/anidb'
 class AniDBTest < Test::Unit::TestCase
 	context "An AniDB model" do
 		setup do
-			@knt = Anime.new(6466, 'tests/knt.xml')
-			@ktm = Anime.new(6468, 'tests/ktm.xml')
+			@knt = AniDB::Anime.new(6466, 'tests/knt.xml')
+			@ktm = AniDB::Anime.new(6468, 'tests/ktm.xml')
 			@knt.update!
 			@ktm.update!
 		end

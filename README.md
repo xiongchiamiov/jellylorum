@@ -10,7 +10,8 @@ This is an anime information mashup, pulling from [AniDB], [A-P], [ANN] and
 
 You'll need [RubyGems] and [Sinatra], of course. Also, fetch [Liquid] for
 template rendering, and [DataMapper] (dm-core) and [SQLite] (do_sqlite3) for the
-models. AniDB functionality requires [XmlSimple] (xml-simple).
+models. AniDB functionality requires [XmlSimple] (xml-simple). A-P requires
+[Nokogiri].
 
 For development, you need [shoulda].
 
@@ -21,3 +22,4 @@ For development, you need [shoulda].
 [SQLite]: http://www.sqlite.org/
 [XmlSimple]: http://xml-simple.rubyforge.org/
 [shoulda]: http://github.com/thoughtbot/shoulda
+[Nokogiri]: http://nokogiri.org/
