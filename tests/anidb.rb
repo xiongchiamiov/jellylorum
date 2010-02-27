@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 require 'shoulda'
 $LOAD_PATH.unshift File.dirname(__FILE__) + '/..'
 

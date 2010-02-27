@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 require 'dm-core'
 require 'open-uri'
 require 'nokogiri'
