@@ -6,8 +6,4 @@ class Layout
 	
 	property :user_id, ObjectID
 	property :columns, Array
-	
-	def self.default_repository_name
-		:mongodb
-	end
 end

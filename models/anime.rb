@@ -11,8 +11,4 @@ class Anime
 	property :anidb, Integer
 	property :ap, Integer
 	property :ann, Integer
-	
-	def self.default_repository_name
-		:mongodb
-	end
 end
