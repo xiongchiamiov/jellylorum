@@ -8,18 +8,26 @@ This is an anime information mashup, pulling from [AniDB], [A-P], [ANN] and
 
 # Requirements #
 
-You'll need [RubyGems] and [Sinatra], of course. Also, fetch [Liquid] for
-template rendering, and [DataMapper] (dm-core) and [SQLite] (do_sqlite3) for the
-models. AniDB functionality requires [XmlSimple] (xml-simple). A-P requires
-[Nokogiri].
+* [RubyGems]
+* [Sinatra] (`sinatra`)
+* [Liquid] (`liquid`)
+* [DataMapper] (`dm-core`)
+* [DataMapper MongoDB Adapter] (`dm-mongo-adapter --pre`)
+* [MongoDB] (`mongo -v 0.18.3`, `mongo_ext -v 0.18.3`)
+* [SQLite] (`do_sqlite3`)
+* [XmlSimple] (`xml-simple`)
+* [Nokogiri] (`nokogiri`)
 
-For development, you need [shoulda].
+For development, you need [shoulda] and [Rake].
 
 [RubyGems]: http://rubyforge.org/projects/rubygems/
 [Sinatra]: http://www.sinatrarb.com/
 [Liquid]: http://www.liquidmarkup.org/
 [DataMapper]: http://datamapper.org/
+[DataMapper MongoDB Adapter]: http://github.com/solnic/dm-mongo-adapter
+[MongoDB]: http://www.mongodb.org/
 [SQLite]: http://www.sqlite.org/
 [XmlSimple]: http://xml-simple.rubyforge.org/
 [shoulda]: http://github.com/thoughtbot/shoulda
 [Nokogiri]: http://nokogiri.org/
+[Rake]: http://rake.rubyforge.org/

@@ -8,6 +8,7 @@ require 'models/anidb'
 # setup stuff
 DataMapper::Logger.new($stdout, :debug)
 DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/sqlite.db")
+DataMapper::setup(:mongodb, :adapter => 'mongo', :database => 'jellylorum')
 DataMapper.auto_migrate!
 
 $file_system = Liquid::LocalFileSystem.new("views")
