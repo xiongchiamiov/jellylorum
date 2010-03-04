@@ -1,0 +1,9 @@
+%center
+	%form(method="post" action="/anime/")
+		%input(name="anime")
+		%button(type="submit") Search
+
+- layout.columns.each do |column|
+	%div(style="display: inline-block; width: #{column[0]}%;")
+		- column[1].each do |data|
+			%p= anime[data[0]].instance_variable_get('@'+data[1])
