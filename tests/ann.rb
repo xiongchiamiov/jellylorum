@@ -13,7 +13,7 @@ class ANNTest < Test::Unit::TestCase
 		
 		context 'updated from the web' do
 			should 'have the correct number of episodes' do
-				assert_equal 24, @knt.episodeCount
+				assert_equal 25, @knt.episodeCount
 			end
 			
 			should 'have the correct year started' do

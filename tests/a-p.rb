@@ -17,7 +17,7 @@ class APTest < Test::Unit::TestCase
 			end
 			
 			should 'have the correct number of episodes' do
-				assert_equal '21+', @knt.episodeCount
+				assert_equal '25', @knt.episodeCount
 			end
 			
 			should 'have the correct year started' do
@@ -25,7 +25,7 @@ class APTest < Test::Unit::TestCase
 			end
 			
 			should 'have the correct year ended' do
-				assert_equal nil, @knt.endDate
+				assert_equal 2010, @knt.endDate.year
 			end
 			
 			should 'have the correct description' do
