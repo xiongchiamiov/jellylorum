@@ -1,18 +1,30 @@
 # -*- coding: UTF-8 -*-
-require 'dm-core'
+require 'light_mongo'
 require 'open-uri'
 require 'nokogiri'
 
+# LightMongo throws a RuntimeError if we don't have a default database set when
+# we define a class that includes LightMongo::Document. Doing this in the test
+# means that we have to require light_mongo explicitly, and then set the
+# database inbetween that and requiring this file.  Eck.
+begin
+	LightMongo.database
+rescue RuntimeError
+	LightMongo.database = 'a-p_test'
+end
+
 module AP
 	class Anime
-		include DataMapper::Resource
+		include LightMongo::Document
 		
-		property :slug,         String, :key => true
-		property :type,         String
-		property :episodeCount, Integer
-		property :startDate,    Date
-		property :endDate,      Date
-		property :description,  Text
+		index :slug
+		
+		attr_accessor :slug         # string (key)
+		attr_accessor :type         # string
+		attr_accessor :episodeCount # integer
+		attr_accessor :startDate    # date
+		attr_accessor :endDate      # date
+		attr_accessor :description  # text
 		
 		def initialize(slug)
 			@slug = slug

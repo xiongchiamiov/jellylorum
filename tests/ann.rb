@@ -30,5 +30,9 @@ EOS
 				assert_equal description, @knt.description
 			end
 		end
+		
+		teardown do
+			LightMongo.connection.drop_database(LightMongo.database.name)
+		end
 	end
 end

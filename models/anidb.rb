@@ -1,20 +1,32 @@
 # -*- coding: UTF-8 -*-
 require 'date'
-require 'dm-core'
+require 'light_mongo'
 require 'open-uri'
 require 'xmlsimple'
 require 'zlib'
 
+# LightMongo throws a RuntimeError if we don't have a default database set when
+# we define a class that includes LightMongo::Document. Doing this in the test
+# means that we have to require light_mongo explicitly, and then set the
+# database inbetween that and requiring this file.  Eck.
+begin
+	LightMongo.database
+rescue RuntimeError
+	LightMongo.database = 'anidb_test'
+end
+
 module AniDB
 	class Anime
-		include DataMapper::Resource
+		include LightMongo::Document
 		
-		property :id,           Integer, :key => true
-		property :type,         String
-		property :episodeCount, Integer
-		property :startDate,    Date
-		property :endDate,      Date
-		property :description,  Text
+		index :id
+		
+		attr_accessor :id           # integer (key)
+		attr_accessor :type         # string
+		attr_accessor :episodeCount # integer
+		attr_accessor :startDate    # date
+		attr_accessor :endDate      # date
+		attr_accessor :description  # text
 		
 		def initialize(id, file=nil)
 			@id = id

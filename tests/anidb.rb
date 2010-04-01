@@ -44,5 +44,9 @@ EOS
 				assert_equal 'An erotic version of the classical Japanese folktale "The Tale of the Bamboo Cutter", produced by Tokyo Studio.', @ktm.description
 			end
 		end
+		
+		teardown do
+			LightMongo.connection.drop_database(LightMongo.database.name)
+		end
 	end
 end
