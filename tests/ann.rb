@@ -24,7 +24,7 @@ class ANNTest < Test::Unit::TestCase
 			
 			should 'have the correct description' do
 				description = <<EOS.strip
-Kuronuma Sawako is nicknamed Sadako due to her resemblance to the girl from the Japanese horror movies "The Ring". Shunned by her classmates, her life starts to change as she befriends Shōta Kazehaya, a very popular boy in her class.
+Kuronuma Sawako is nicknamed Sadako due to her resemblance to the girl from the Japanese horror movies "The Ring". Shunned by her classmates, her life starts to change after she befriends Shōta Kazehaya, a very popular boy in her class.
 	Kuronuma Sawako’s one wish in life is to make friends. That’s a difficult proposition when everyone who meets her cowers in terror. She admires her classmate, Kazehaya-kun, a popular, easygoing and 100% refreshing guy who is nice with everyone, even with her.
 EOS
 				assert_equal description, @knt.description
