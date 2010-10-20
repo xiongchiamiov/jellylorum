@@ -13,3 +13,14 @@ end
 task :startdb do
 	sh %{mongod --dbpath /data/db > /dev/null &}
 end
+
+task :seeddb do
+	require 'models/a-p'
+	require 'models/anidb'
+	require 'models/anime'
+	require 'models/ann'
+	require 'models/layout'
+	
+	knt = Anime.new
+	knt.anidb = AniDB::Anime.new(6466, 'tests/knt.xml')
+end
