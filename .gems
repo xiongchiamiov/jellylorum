@@ -1,0 +1,10 @@
+sinatra
+liquid
+dm-core
+dm-mongo-adapter --pre
+mongo -v 0.18.3
+mongo_ext -v 0.18.3
+do_sqlite3
+xml-simple
+nokogiri
+
