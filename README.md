@@ -6,28 +6,12 @@ This is an anime information mashup, pulling from [AniDB], [A-P], [ANN] and
 [ANN]: http://animenewsnetwork.com
 [MAL]: http://myanimelist.net
 
-# Requirements #
+I originally started doing this with Python/Django, then moved on to Ruby/Sinatra.  I don't really want to do a long-term project in Ruby, though, and hosting Python's a bit of a PITA for a poor student like me.  Since my trend has been to see if I can host everything on GitHub, I decided to try building jellylorum completely client-side.
 
-* [RubyGems]
-* [Sinatra] (`sinatra`)
-* [Liquid] (`liquid`)
-* [DataMapper] (`dm-core`)
-* [DataMapper MongoDB Adapter] (`dm-mongo-adapter --pre`)
-* [MongoDB] (`mongo -v 0.18.3`, `mongo_ext -v 0.18.3`)
-* [SQLite] (`do_sqlite3`)
-* [XmlSimple] (`xml-simple`)
-* [Nokogiri] (`nokogiri`)
+Well, ok, I lied a bit.  I'll use [OpenKeyval] for storing data, and probably [The Keymaster] to somewhat prevent vandalism.
 
-For development, you need [shoulda] and [Rake].
+Yes, it's a terrible strategy for the long-term, but I'm curious to see if I can do it.
 
-[RubyGems]: http://rubyforge.org/projects/rubygems/
-[Sinatra]: http://www.sinatrarb.com/
-[Liquid]: http://www.liquidmarkup.org/
-[DataMapper]: http://datamapper.org/
-[DataMapper MongoDB Adapter]: http://github.com/solnic/dm-mongo-adapter
-[MongoDB]: http://www.mongodb.org/
-[SQLite]: http://www.sqlite.org/
-[XmlSimple]: http://xml-simple.rubyforge.org/
-[shoulda]: http://github.com/thoughtbot/shoulda
-[Nokogiri]: http://nokogiri.org/
-[Rake]: http://rake.rubyforge.org/
+[OpenKeyval]: http://openkeyval.org/
+[The Keymaster]: http://www.thekeymaster.org/
+
