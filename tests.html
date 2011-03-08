@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>jellylorum Test Runner</title>
+	<script type="text/javascript">
+		var css = function(identifier) { return document.getElement(identifier); }
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="tests/jasmine-1.0.1/jasmine.css" />
+	<script type="text/javascript" src="tests/jasmine-1.0.1/jasmine.js"></script>
+	<script type="text/javascript" src="tests/jasmine-1.0.1/jasmine-html.js"></script>
+	<script type="text/javascript" src="tests/jasmine-1.0.1/jasmine-dom-matchers.js"></script>
+	<script type="text/javascript" src="tests/jasmine-1.0.1/jasmine-dom-fixtures.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/mootools/1.3.0/mootools-yui-compressed.js"></script>
+	<script type="text/javascript" src="mootools-more.js"></script>
+
+	<script type="text/javascript" src="models/a-p.js"></script>
+	<script type="text/javascript" src="tests/a-p.js"></script>
+	<script type="text/javascript">
+		window.addEvent('domready', function() {
+			knt = new APAnime('kimi-ni-todoke');
+			knt.update();
+			setTimeout(function() {
+			jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+			jasmine.getEnv().execute();
+			}, 5000);
+		});
+	</script>
+</head>
+<body>
+</body>
+</html>
+
