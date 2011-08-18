@@ -1,7 +1,7 @@
+from datetime import datetime
 from django.db import models
 from pyquery import PyQuery
 from re import match
-from time import strptime
 
 class Anime(models.Model):
 	slug = models.SlugField()
@@ -18,9 +18,26 @@ class AP(models.Model):
 	slug = models.SlugField(unique=True)
 	type = models.CharField(max_length=30, choices=TYPE_CHOICES)
 	episodeCount = models.PositiveSmallIntegerField()
-	startDate = models.DateField()
-	endDate = models.DateField()
+	startDate = models.DateField(blank=True, null=True, default=None)
+	endDate = models.DateField(blank=True, null=True, default=None)
 	description = models.TextField()
+
+	def update(self):
+		q = PyQuery(url='http://www.anime-planet.com/anime/'+self.slug)
+
+		html = q('.tabPanelLeft .type').text()
+		(type, episodeCount) = match(r'^(\w+) \((\d+\+?)', html).groups()
+		self.type = type
+		self.episodeCount = int(episodeCount)
+
+		self.description = q('.entryContent .synopsis p').text()
+
+		html = q('.tabPanelLeft .year').text()
+		(startDate, endDate) = match(r'(\d+|\?) - (\d+|\?)', html).groups()
+		self.startDate = datetime.strptime(startDate, '%Y') if startDate != '?' else None
+		self.endDate = datetime.strptime(endDate, '%Y') if endDate != '?' else None
+
+		self.save()
 
 class AniDB(models.Model):
 	anime = models.ForeignKey(Anime)
