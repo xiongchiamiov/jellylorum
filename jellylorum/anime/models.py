@@ -1,3 +1,4 @@
+import sys
 from datetime import datetime
 from django.db import models
 from pyquery import PyQuery
@@ -56,4 +57,26 @@ class ANN(models.Model):
 	episodeCount = models.PositiveSmallIntegerField()
 	startDate = models.DateField()
 	description = models.TextField()
+
+	def update(self):
+		import pdb
+		q = PyQuery(url='http://www.animenewsnetwork.com/encyclopedia/anime.php?id=%s' % self.id)
+
+		# get all sorts of useful information, and some
+		infos = q('.encyc-info-type')
+
+		for info in infos:
+			info = q(info).text().strip()
+			# This is some hackery necessary because of bad encoding handling and ANN being stupid.
+			info = info.encode('latin-1').decode('utf-8')
+			if info.startswith('Number of episodes'):
+				self.episodeCount = match(r'Number of episodes: (\d+)', info).groups()[0]
+			elif info.startswith('Vintage'):
+				(startDate, endDate) = match(r'Vintage: ([\d-]+) to ([\d-]+)', info).groups()
+				self.startDate = datetime.strptime(startDate, '%Y-%m-%d')
+				self.endDate = datetime.strptime(endDate, '%Y-%m-%d')
+			elif info.startswith('Plot Summary'):
+				self.description = match(r'Plot Summary: (.*)', info).groups()[0]
+
+		self.save()
 
