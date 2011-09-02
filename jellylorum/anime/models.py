@@ -56,6 +56,7 @@ class ANN(models.Model):
 	id = models.PositiveIntegerField(primary_key=True)
 	episodeCount = models.PositiveSmallIntegerField()
 	startDate = models.DateField()
+	endDate = models.DateField(blank=True, null=True, default=None)
 	description = models.TextField()
 
 	def update(self):

@@ -18,5 +18,17 @@
             "type": "TV", 
             "slug": "kimi-ni-todoke"
         }
+    },
+    {
+        "pk": 10625,
+        "model": "anime.ann",
+        "fields": {
+            "startDate": "2009-10-06",
+            "episodeCount": 25,
+            "anime": 1,
+            "endDate": "2010-03-30",
+            "description": "Kuronuma Sawako\u2019s one wish in life is to make friends. That\u2019s a difficult proposition when everyone who meets her cowers in terror. She admires her classmate, Kazehaya-kun, a popular, easygoing and 100% refreshing guy who is nice with everyone, even with her. Sawako Kuronuma is nicknamed Sadako due to her resemblance to the girl from the Japanese horror movies \"The Ring\". Shunned by her classmates, her life starts to change after she befriends Sh\u014dta Kazehaya, a very popular boy in her class."
+        }
     }
 ]
+
