@@ -126,8 +126,16 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'south',
+    'django_nose',
     'anime',
 )
+
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+
+NOSE_ARGS = [
+    '--with-coverage',
+    '--cover-package=anime.models',
+]
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
