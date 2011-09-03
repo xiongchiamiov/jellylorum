@@ -1,8 +1,12 @@
 import sys
 from datetime import datetime
 from django.db import models
+from gzip import GzipFile
+from lxml import etree
 from pyquery import PyQuery
 from re import match
+from StringIO import StringIO
+from urllib2 import urlopen
 
 class Anime(models.Model):
 	slug = models.SlugField()
@@ -49,6 +53,25 @@ class AniDB(models.Model):
 	startDate = models.DateField()
 	endDate = models.DateField()
 	description = models.TextField()
+
+	def update(self):
+		url = 'http://api.anidb.net:9001/httpapi?request=anime&client=jellylorum&clientver=1&protover=1&aid=%s' % self.id
+		response = urlopen(url)
+		buffer = StringIO(response.read())
+		file = GzipFile(fileobj=buffer)
+		xml = file.read()
+
+		doc = etree.fromstring(xml)
+
+		self.episodeCount = int(doc.findall('episodecount')[0].text)
+		self.description = doc.findall('description')[0].text
+
+		startDate = doc.findall('startdate')[0].text
+		endDate = doc.findall('enddate')[0].text
+		self.startDate = datetime.strptime(startDate, '%Y-%m-%d')
+		self.endDate = datetime.strptime(endDate, '%Y-%m-%d')
+
+		self.save()
 
 class ANN(models.Model):
 	anime = models.ForeignKey(Anime)
