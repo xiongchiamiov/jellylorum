@@ -63,11 +63,11 @@ class AniDB(models.Model):
 
 		doc = etree.fromstring(xml)
 
-		self.episodeCount = int(doc.findall('episodecount')[0].text)
-		self.description = doc.findall('description')[0].text
+		self.episodeCount = int(doc.find('episodecount').text)
+		self.description = doc.find('description').text
 
-		startDate = doc.findall('startdate')[0].text
-		endDate = doc.findall('enddate')[0].text
+		startDate = doc.find('startdate').text
+		endDate = doc.find('enddate').text
 		self.startDate = datetime.strptime(startDate, '%Y-%m-%d')
 		self.endDate = datetime.strptime(endDate, '%Y-%m-%d')
 
