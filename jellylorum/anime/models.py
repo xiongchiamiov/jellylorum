@@ -83,7 +83,6 @@ class ANN(models.Model):
 	description = models.TextField()
 
 	def update(self):
-		import pdb
 		q = PyQuery(url='http://www.animenewsnetwork.com/encyclopedia/anime.php?id=%s' % self.id)
 
 		# get all sorts of useful information, and some
