@@ -1,6 +1,30 @@
+# -*- coding: utf-8 -*-
 from anime.models import *
 
 from django.test import TestCase
+
+class APTest(TestCase):
+	@classmethod
+	def setUpClass(cls):
+		cls.knt = AP()
+		cls.knt.slug = 'kimi-ni-todoke'
+		cls.knt.update()
+
+	def test_correct_type(self):
+		self.assertEqual('TV', self.knt.type)
+	
+	def test_correct_number_of_episodes(self):
+		self.assertEqual(25, self.knt.episodeCount)
+
+	def test_correct_year_started(self):
+		self.assertEqual(2009, self.knt.startDate.year)
+
+	def test_correct_year_ended(self):
+		self.assertEqual(2010, self.knt.endDate.year)
+	
+	def test_correct_description(self):
+		self.assertEqual(u"Sawako Kuronuma is just like any other high school girl who wants to make friends and be useful. The only problem is she bears a worrying resemblance to Sadako from 'The Ring!' Because of her reputation, people are not only terrified of her, but small dogs even bark in fear at her presence; in fact, the only person in school who will talk to her is the lively class hottie, Kazehara. As the pair spends more time together, Kazehara slowly begins to bring Sawako out of her shell and soon their feelings for each other develop further. Though with her crippling insecurities, lack of social skills, and a series of cruel rumors and misunderstandings, it seems that Sawako's dream of a normal life won’t be quite so easy to obtain.",
+		                 self.knt.description)
 
 class AniDBTest(TestCase):
 	@classmethod
