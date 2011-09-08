@@ -105,7 +105,7 @@ class ANN(models.Model):
 			# This is some hackery necessary because of bad encoding handling and ANN being stupid.
 			info = info.encode('latin-1').decode('utf-8')
 			if info.startswith('Number of episodes'):
-				self.episodeCount = match(r'Number of episodes: (\d+)', info).groups()[0]
+				self.episodeCount = int(match(r'Number of episodes: (\d+)', info).groups()[0])
 			elif info.startswith('Vintage'):
 				(startDate, endDate) = match(r'Vintage: ([\d-]+) to ([\d-]+)', info).groups()
 				self.startDate = datetime.strptime(startDate, '%Y-%m-%d')
