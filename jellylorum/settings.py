@@ -135,6 +135,7 @@ TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 NOSE_ARGS = [
     '--with-coverage',
     '--cover-package=anime.models',
+    '--pdb',
 ]
 
 # A sample logging configuration. The only tangible logging
