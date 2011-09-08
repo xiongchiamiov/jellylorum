@@ -61,3 +61,25 @@ class AniDBTest(TestCase):
 		self.assertEqual('An erotic version of the classical Japanese folktale "The Tale of the Bamboo Cutter", produced by Tokyo Studio.',
 		                 self.ktm.description)
 
+class ANNTest(TestCase):
+	@classmethod
+	def setUpClass(cls):
+		cls.knt = ANN()
+		cls.knt.id = 10625
+		cls.knt.update()
+		
+		cls.maxDiff = None
+	
+	def test_correct_number_of_episodes(self):
+		self.assertEqual(25, self.knt.episodeCount)
+
+	def test_correct_year_started(self):
+		self.assertEqual('2009-10-06', self.knt.startDate.strftime('%Y-%m-%d'))
+
+	def test_correct_year_ended(self):
+		self.assertEqual('2010-03-30', self.knt.endDate.strftime('%Y-%m-%d'))
+	
+	def test_correct_description(self):
+		self.assertEqual(u'Kuronuma Sawako’s one wish in life is to make friends. That’s a difficult proposition when everyone who meets her cowers in terror. She admires her classmate, Kazehaya-kun, a popular, easygoing and 100% refreshing guy who is nice with everyone, even with her. Sawako Kuronuma is nicknamed Sadako due to her resemblance to the girl from the Japanese horror movies "The Ring". Shunned by her classmates, her life starts to change after she befriends Shōta Kazehaya, a very popular boy in her class.',
+		                self.knt.description)
+
