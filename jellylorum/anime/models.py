@@ -50,8 +50,8 @@ class AniDB(models.Model):
 	id = models.PositiveIntegerField(primary_key=True)
 	type = models.CharField(max_length=30, choices=TYPE_CHOICES)
 	episodeCount = models.PositiveSmallIntegerField()
-	startDate = models.DateField()
-	endDate = models.DateField()
+	startDate = models.DateField(blank=True, null=True, default=None)
+	endDate = models.DateField(blank=True, null=True, default=None)
 	description = models.TextField()
 
 	def update(self):
@@ -63,15 +63,27 @@ class AniDB(models.Model):
 
 		doc = etree.fromstring(xml)
 
+		self.type = doc.find('type').text
 		self.episodeCount = int(doc.find('episodecount').text)
 		self.description = doc.find('description').text
 
-		startDate = doc.find('startdate').text
-		endDate = doc.find('enddate').text
-		self.startDate = datetime.strptime(startDate, '%Y-%m-%d')
-		self.endDate = datetime.strptime(endDate, '%Y-%m-%d')
+		startDate = doc.find('startdate')
+		endDate = doc.find('enddate')
+		self.startDate = self.parseDate(startDate)
+		self.endDate = self.parseDate(endDate)
 
 		self.save()
+	
+	@staticmethod
+	def parseDate(node):
+		if node is None:
+			return None
+
+		date = node.text
+		try:
+			return datetime.strptime(date, '%Y-%m-%d')
+		except ValueError:
+			return datetime.strptime(date, '%Y')
 
 class ANN(models.Model):
 	anime = models.ForeignKey(Anime)
