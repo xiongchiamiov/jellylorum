@@ -3,6 +3,16 @@
 {% block "title" %}{{ anime.slug }}{% endblock %}
 
 {% block "content" %}
-{{ anime.slug }}
+<div id="title-header">
+	<h1 id="anime-title">{{ anime.slug }}</h1>
+	<h2>
+		[
+		<a href="http://anidb.net/a{{anime.anidb.id}}">AniDB</a> |
+		<a href="http://anime-planet.com/anime/{{anime.ap.slug}}">A-P</a> |
+		<a href="http://www.animenewsnetwork.com/encyclopedia/anime.php?id={{anime.ann.id}}">ANN</a>
+		]
+	</h2>
+</div>
+
 {% endblock %}
 
