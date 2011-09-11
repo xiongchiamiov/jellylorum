@@ -18,7 +18,7 @@ TYPE_CHOICES = (
 )
 
 class AP(models.Model):
-	anime = models.ForeignKey(Anime)
+	anime = models.OneToOneField(Anime)
 
 	slug = models.SlugField(unique=True)
 	type = models.CharField(max_length=30, choices=TYPE_CHOICES)
@@ -45,7 +45,7 @@ class AP(models.Model):
 		self.save()
 
 class AniDB(models.Model):
-	anime = models.ForeignKey(Anime)
+	anime = models.OneToOneField(Anime)
 
 	id = models.PositiveIntegerField(primary_key=True)
 	type = models.CharField(max_length=30, choices=TYPE_CHOICES)
@@ -86,7 +86,7 @@ class AniDB(models.Model):
 			return datetime.strptime(date, '%Y')
 
 class ANN(models.Model):
-	anime = models.ForeignKey(Anime)
+	anime = models.OneToOneField(Anime)
 
 	id = models.PositiveIntegerField(primary_key=True)
 	episodeCount = models.PositiveSmallIntegerField()
