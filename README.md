@@ -18,4 +18,7 @@ Since we're using virtualenv, everything's nice and easy.
 	$> virtualenv --no-site-packages env
 	$> source env/bin/activate
 	$> pip install -r requirements.txt
+	$> ./manage.py syncdb
+	$> ./manage.py migrate
+	$> ./manage.py loaddata anime/initial_data.json
 
