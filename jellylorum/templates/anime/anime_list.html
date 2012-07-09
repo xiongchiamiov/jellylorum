@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block "title" %}Anime{% endblock %}
+
+{% block "content" %}
+	{% for anime in object_list %}
+		<a href="{{ anime.slug }}">{{ anime.slug }}</a><br />
+	{% endfor %}
+{% endblock %}
+
