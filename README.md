@@ -22,3 +22,13 @@ Since we're using virtualenv, everything's nice and easy.
 	$> ./manage.py migrate
 	$> ./manage.py loaddata anime/initial_data.json
 
+# TODO #
+
+* Grab more information from sources.
+* Display source information on detail page.
+* Add searching.
+* Refetch when data's too stale.
+* And update via AJAX.
+* Figure out how we're going to get the database populated.
+* User accounts for customization?
+
