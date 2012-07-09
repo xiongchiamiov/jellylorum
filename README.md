@@ -33,7 +33,6 @@ Since I always forget.
 # TODO #
 
 * Grab more information from sources.
-* Display source information on detail page.
 * Add searching.
 * Refetch when data's too stale.
 * And update via AJAX.

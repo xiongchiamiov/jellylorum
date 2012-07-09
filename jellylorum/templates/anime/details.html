@@ -13,6 +13,24 @@
 		]
 	</h2>
 </div>
+<div id="anidb" class="infobox">
+	Type: {{ anime.anidb.type }}<br />
+	Episodes: {{ anime.anidb.episodeCount }}<br />
+	Run: {{ anime.anidb.startDate }} &ndash; {{ anime.anidb.endDate }}<br />
+	{{ anime.anidb.description }}
+</div>
+<div id="ap" class="infobox">
+	Title: {{ anime.ap.title }}<br />
+	Type: {{ anime.ap.type }}<br />
+	Episodes: {{ anime.ap.episodeCount }}<br />
+	Run: {{ anime.ap.startDate }} &ndash; {{ anime.ap.endDate }}<br />
+	{{ anime.ap.description }}
+</div>
+<div id="ann" class="infobox">
+	Episodes: {{ anime.ann.episodeCount }}<br />
+	Run: {{ anime.ann.startDate }} &ndash; {{ anime.ann.endDate }}<br />
+	{{ anime.ann.description }}
+</div>
 
 {% endblock %}
 
