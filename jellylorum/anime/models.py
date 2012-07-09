@@ -21,6 +21,7 @@ class AP(models.Model):
 	anime = models.OneToOneField(Anime)
 
 	slug = models.SlugField(unique=True)
+	title = models.CharField(max_length=255)
 	type = models.CharField(max_length=30, choices=TYPE_CHOICES)
 	episodeCount = models.PositiveSmallIntegerField()
 	startDate = models.DateField(blank=True, null=True, default=None)
@@ -29,6 +30,8 @@ class AP(models.Model):
 
 	def update(self):
 		q = PyQuery(url='http://www.anime-planet.com/anime/'+self.slug)
+		
+		self.title = q('#anime .theme').text()
 
 		html = q('.tabPanelLeft .type').text()
 		(type, episodeCount) = match(r'^(\w+) \((\d+\+?)', html).groups()

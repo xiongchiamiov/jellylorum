@@ -16,6 +16,9 @@ class APTest(TestCase):
 		
 		cls.maxDiff = None
 
+	def test_correct_title(self):
+		self.assertEqual('Kimi ni Todoke', self.knt.title)
+	
 	def test_correct_type(self):
 		self.assertEqual('TV', self.knt.type)
 	

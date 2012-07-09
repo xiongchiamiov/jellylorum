@@ -13,13 +13,14 @@
             "startDate": "2009-01-01", 
             "endDate": "2010-01-01", 
             "description": "Sawako Kuronuma is just like any other high school girl who wants to make friends and be useful. The only problem is she bears a worrying resemblance to Sadako from 'The Ring!' Because of her reputation, people are not only terrified of her, but small dogs even bark in fear at her presence; in fact, the only person in school who will talk to her is the lively class hottie, Kazehara. As the pair spends more time together, Kazehara slowly begins to bring Sawako out of her shell and soon their feelings for each other develop further. Though with her crippling insecurities, lack of social skills, and a series of cruel rumors and misunderstandings, it seems that Sawako's dream of a normal life won\u2019t be quite so easy to obtain.", 
+            "title": "Kimi ni Todoke", 
             "episodeCount": 25, 
             "anime": 1, 
             "type": "TV", 
             "slug": "kimi-ni-todoke"
         }
-    },
-	{
+    }, 
+    {
         "pk": 6466, 
         "model": "anime.anidb", 
         "fields": {
@@ -30,17 +31,16 @@
             "anime": 1, 
             "type": ""
         }
-    },
+    }, 
     {
-        "pk": 10625,
-        "model": "anime.ann",
+        "pk": 10625, 
+        "model": "anime.ann", 
         "fields": {
-            "startDate": "2009-10-06",
-            "episodeCount": 25,
-            "anime": 1,
-            "endDate": "2010-03-30",
+            "startDate": "2009-10-06", 
+            "episodeCount": 25, 
+            "anime": 1, 
+            "endDate": "2010-03-30", 
             "description": "Kuronuma Sawako\u2019s one wish in life is to make friends. That\u2019s a difficult proposition when everyone who meets her cowers in terror. She admires her classmate, Kazehaya-kun, a popular, easygoing and 100% refreshing guy who is nice with everyone, even with her. Sawako Kuronuma is nicknamed Sadako due to her resemblance to the girl from the Japanese horror movies \"The Ring\". Shunned by her classmates, her life starts to change after she befriends Sh\u014dta Kazehaya, a very popular boy in her class."
         }
     }
 ]
-
