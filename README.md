@@ -22,6 +22,14 @@ Since we're using virtualenv, everything's nice and easy.
 	$> ./manage.py migrate
 	$> ./manage.py loaddata anime/initial_data.json
 
+# Creating a Migration #
+
+Since I always forget.
+
+	$> ./manage.py schemamigration --auto anime
+	$> ./manage.py migrate
+	$> ./manage.py dumpdata anime --indent=4 > anime/initial_data.json
+
 # TODO #
 
 * Grab more information from sources.
