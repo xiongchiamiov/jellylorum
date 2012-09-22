@@ -74,6 +74,10 @@ class AniDBTest(TestCase):
 	def test_correct_year_ended(self):
 		self.assertEqual(None, self.tt.endDate)
 		self.assertEqual(1987, self.ktm.endDate.year)
+	
+	def test_correct_website(self):
+		self.assertEqual('http://ch.nicovideo.jp/channel/ch60379', self.tt.website)
+		self.assertEqual(None, self.ktm.website)
 
 	def test_correct_description(self):
 		self.assertEqual('A heartwarming story about a cockroach girl who tries to be liked by humans while dodging the insecticide.',

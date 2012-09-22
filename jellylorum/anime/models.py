@@ -56,6 +56,7 @@ class AniDB(models.Model):
 	episodeCount = models.PositiveSmallIntegerField()
 	startDate = models.DateField(blank=True, null=True, default=None)
 	endDate = models.DateField(blank=True, null=True, default=None)
+	website = models.CharField(max_length=128, blank=True, null=True, default=None)
 	description = models.TextField()
 
 	def update(self):
@@ -75,6 +76,12 @@ class AniDB(models.Model):
 		self.type = doc.find('type').text
 		self.episodeCount = int(doc.find('episodecount').text)
 		self.description = doc.find('description').text
+		
+		website = doc.find('url')
+		# lxml.etree.Element has a broken __nonzero__ method, so bool(website)
+		# is false even when it exists and has text.
+		if website is not None:
+			self.website = website.text
 
 		startDate = doc.find('startdate')
 		endDate = doc.find('enddate')
