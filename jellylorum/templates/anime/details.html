@@ -18,7 +18,10 @@
 	Type: {{ anime.anidb.type }}<br />
 	Episodes: {{ anime.anidb.episodeCount }}<br />
 	Run: {{ anime.anidb.startDate }} &ndash; {{ anime.anidb.endDate }}<br />
-	{{ anime.anidb.description }}
+	{{ anime.anidb.description }}<br />
+	{% if anime.anidb.website %}
+		<a href="{{ anime.anidb.website }}">Official Website</a><br />
+	{% endif %}
 </div>
 <div id="ap" class="infobox">
 	Title: {{ anime.ap.title }}<br />
