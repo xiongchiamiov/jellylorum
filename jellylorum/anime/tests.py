@@ -54,6 +54,10 @@ class AniDBTest(TestCase):
 		cls.ktm.update()
 		
 		cls.maxDiff = None
+	
+	def test_correct_title(self):
+		self.assertEqual('Gokicha!! Cockroach Girls', self.tt.title)
+		self.assertEqual('Kaguya-hime: Taketori Monogatari', self.ktm.title)
 
 	def test_correct_type(self):
 		self.assertEqual('Web', self.tt.type)

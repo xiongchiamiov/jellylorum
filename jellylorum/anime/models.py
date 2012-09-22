@@ -51,6 +51,7 @@ class AniDB(models.Model):
 	anime = models.OneToOneField(Anime)
 
 	id = models.PositiveIntegerField(primary_key=True)
+	title = models.CharField(max_length=128)
 	type = models.CharField(max_length=30, choices=TYPE_CHOICES)
 	episodeCount = models.PositiveSmallIntegerField()
 	startDate = models.DateField(blank=True, null=True, default=None)
@@ -65,6 +66,11 @@ class AniDB(models.Model):
 		xml = file.read()
 
 		doc = etree.fromstring(xml)
+		
+		for title in doc.find('titles'):
+			if title.get('type') == 'main':
+				self.title = title.text
+				break
 
 		self.type = doc.find('type').text
 		self.episodeCount = int(doc.find('episodecount').text)
@@ -74,7 +80,7 @@ class AniDB(models.Model):
 		endDate = doc.find('enddate')
 		self.startDate = self.parseDate(startDate)
 		self.endDate = self.parseDate(endDate)
-
+		
 		self.save()
 	
 	@staticmethod
