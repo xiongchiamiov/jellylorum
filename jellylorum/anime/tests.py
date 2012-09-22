@@ -44,7 +44,7 @@ class AniDBTest(TestCase):
 		anime2.save()
 		
 		cls.tt = AniDB()
-		cls.tt.id = 9077
+		cls.tt.id = 9434
 		cls.tt.anime = anime
 		cls.tt.update()
 
@@ -56,15 +56,15 @@ class AniDBTest(TestCase):
 		cls.maxDiff = None
 
 	def test_correct_type(self):
-		self.assertEqual('TV Series', self.tt.type)
+		self.assertEqual('Web', self.tt.type)
 		self.assertEqual('OVA', self.ktm.type)
 
 	def test_correct_number_of_episodes(self):
-		self.assertEqual(13, self.tt.episodeCount)
+		self.assertEqual(1, self.tt.episodeCount)
 		self.assertEqual(1, self.ktm.episodeCount)
 
 	def test_correct_year_started(self):
-		self.assertEqual('2012-07-01', self.tt.startDate.strftime('%Y-%m-%d'))
+		self.assertEqual('2012-09-14', self.tt.startDate.strftime('%Y-%m-%d'))
 		self.assertEqual(1987, self.ktm.startDate.year)
 
 	def test_correct_year_ended(self):
@@ -72,7 +72,7 @@ class AniDBTest(TestCase):
 		self.assertEqual(1987, self.ktm.endDate.year)
 
 	def test_correct_description(self):
-		self.assertEqual('The story centers around five Japanese high school students who are too young to be called adults, but who no longer think of themselves as children. http://anidb.net/ch42694 [Sakai Wakana] once took music lessons, but she withdrew from music after losing her mother. http://anidb.net/ch42695 [Miyamoto Konatsu] is a positive-thinking girl who loves singing and spends time after school at the vocal music club. http://anidb.net/ch42696 [Okita Sawa] is a spirited archery club member who dreams of becoming a horse rider. http://anidb.net/ch42697 [Tanaka Taichi] is a chronically late badminton team member who lives with his college student sister. http://anidb.net/ch42693 [Wien] just transfered into Wakana`s class after 12 years abroad in Austria. Music brings Wakana, Konatsu, Sawa and the others together into an ensemble during their last summer in high school.\nSource: ANN',
+		self.assertEqual('A heartwarming story about a cockroach girl who tries to be liked by humans while dodging the insecticide.',
 		                 self.tt.description)
 		self.assertEqual('An erotic version of the classical Japanese folktale "The Tale of the Bamboo Cutter", produced by Tokyo Studio.',
 		                 self.ktm.description)
