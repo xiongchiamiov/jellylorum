@@ -15,7 +15,7 @@ This is an anime information mashup, pulling from [AniDB], [A-P] and [ANN].
 Since we're using virtualenv, everything's nice and easy.
 
 	$> cd jellylorum
-	$> virtualenv --no-site-packages env
+	$> virtualenv --distribute --no-site-packages env
 	$> source env/bin/activate
 	$> pip install -r requirements.txt
 	$> ./manage.py syncdb
