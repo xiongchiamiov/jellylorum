@@ -27,6 +27,7 @@ class AP(models.Model):
 	studio = models.CharField(max_length=30)
 	startDate = models.DateField(blank=True, null=True, default=None)
 	endDate = models.DateField(blank=True, null=True, default=None)
+	rating = models.DecimalField(max_digits=4, decimal_places=3, blank=True, null=True, default=None)
 	description = models.TextField()
 
 	def update(self):
@@ -47,6 +48,14 @@ class AP(models.Model):
 		(startDate, endDate) = match(r'(\d+|\?) - (\d+|\?)', html).groups()
 		self.startDate = datetime.strptime(startDate, '%Y') if startDate != '?' else None
 		self.endDate = datetime.strptime(endDate, '%Y') if endDate != '?' else None
+
+		html = q('.tabPanelLeft .avgRating span').text()
+		matches = match(r'^([\d.]+) out of', html)
+		if matches:
+			self.rating = float(matches.groups()[0])
+		# Sometimes there aren't enough ratings yet to provide an average.
+		else:
+			self.rating = None
 
 		self.save()
 
