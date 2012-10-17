@@ -45,7 +45,12 @@ class AP(models.Model):
 		self.description = q('.entryContent .synopsis p').text()
 
 		html = q('.tabPanelLeft .year').text()
-		(startDate, endDate) = match(r'(\d+|\?) - (\d+|\?)', html).groups()
+		matches = match(r'(\d+|\?) - (\d+|\?)', html)
+		if matches:
+			(startDate, endDate) = matches.groups()
+		else:
+			# Movies, OVAs, and some TV series start and end in the same year.
+			startDate = endDate = match(r'(\d+|\?)', html).groups()[0]
 		self.startDate = datetime.strptime(startDate, '%Y') if startDate != '?' else None
 		self.endDate = datetime.strptime(endDate, '%Y') if endDate != '?' else None
 
