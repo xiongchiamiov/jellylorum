@@ -43,10 +43,10 @@ class AniDBTest(TestCase):
 		anime2 = Anime()
 		anime2.save()
 		
-		cls.tt = AniDB()
-		cls.tt.id = 9434
-		cls.tt.anime = anime
-		cls.tt.update()
+		cls.gcg = AniDB()
+		cls.gcg.id = 9434
+		cls.gcg.anime = anime
+		cls.gcg.update()
 
 		cls.ktm = AniDB()
 		cls.ktm.id = 6468
@@ -56,32 +56,32 @@ class AniDBTest(TestCase):
 		cls.maxDiff = None
 	
 	def test_correct_title(self):
-		self.assertEqual('Gokicha!! Cockroach Girls', self.tt.title)
+		self.assertEqual('Gokicha!! Cockroach Girls', self.gcg.title)
 		self.assertEqual('Kaguya-hime: Taketori Monogatari', self.ktm.title)
 
 	def test_correct_type(self):
-		self.assertEqual('Web', self.tt.type)
+		self.assertEqual('Web', self.gcg.type)
 		self.assertEqual('OVA', self.ktm.type)
 
 	def test_correct_number_of_episodes(self):
-		self.assertEqual(2, self.tt.episodeCount)
+		self.assertEqual(2, self.gcg.episodeCount)
 		self.assertEqual(1, self.ktm.episodeCount)
 
 	def test_correct_year_started(self):
-		self.assertEqual('2012-09-14', self.tt.startDate.strftime('%Y-%m-%d'))
+		self.assertEqual('2012-09-14', self.gcg.startDate.strftime('%Y-%m-%d'))
 		self.assertEqual(1987, self.ktm.startDate.year)
 
 	def test_correct_year_ended(self):
-		self.assertEqual(None, self.tt.endDate)
+		self.assertEqual(None, self.gcg.endDate)
 		self.assertEqual(1987, self.ktm.endDate.year)
 	
 	def test_correct_website(self):
-		self.assertEqual('http://ch.nicovideo.jp/channel/ch60379', self.tt.website)
+		self.assertEqual('http://ch.nicovideo.jp/channel/ch60379', self.gcg.website)
 		self.assertEqual(None, self.ktm.website)
 
 	def test_correct_description(self):
 		self.assertEqual('A heartwarming story about a cockroach girl who tries to be liked by humans while dodging the insecticide.',
-		                 self.tt.description)
+		                 self.gcg.description)
 		self.assertEqual('An erotic version of the classical Japanese folktale "The Tale of the Bamboo Cutter", produced by Tokyo Studio.',
 		                 self.ktm.description)
 
