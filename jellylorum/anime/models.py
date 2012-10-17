@@ -24,6 +24,7 @@ class AP(models.Model):
 	title = models.CharField(max_length=255)
 	type = models.CharField(max_length=30, choices=TYPE_CHOICES)
 	episodeCount = models.PositiveSmallIntegerField()
+	studio = models.CharField(max_length=30)
 	startDate = models.DateField(blank=True, null=True, default=None)
 	endDate = models.DateField(blank=True, null=True, default=None)
 	description = models.TextField()
@@ -37,6 +38,8 @@ class AP(models.Model):
 		(type, episodeCount) = match(r'^(\w+) \((\d+\+?)', html).groups()
 		self.type = type
 		self.episodeCount = int(episodeCount)
+
+		self.studio = q('.tabPanelLeft .studio').text()
 
 		self.description = q('.entryContent .synopsis p').text()
 

@@ -24,6 +24,9 @@ class APTest(TestCase):
 	
 	def test_correct_number_of_episodes(self):
 		self.assertEqual(25, self.knt.episodeCount)
+	
+	def test_correct_studio(self):
+		self.assertEqual('Production I.G', self.knt.studio)
 
 	def test_correct_year_started(self):
 		self.assertEqual(2009, self.knt.startDate.year)
