@@ -64,7 +64,7 @@ class AniDBTest(TestCase):
 		self.assertEqual('OVA', self.ktm.type)
 
 	def test_correct_number_of_episodes(self):
-		self.assertEqual(1, self.tt.episodeCount)
+		self.assertEqual(2, self.tt.episodeCount)
 		self.assertEqual(1, self.ktm.episodeCount)
 
 	def test_correct_year_started(self):
