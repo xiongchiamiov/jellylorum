@@ -1,5 +1,6 @@
 import sys
 from datetime import datetime
+from decimal import Decimal
 from django.db import models
 from gzip import GzipFile
 from lxml import etree
@@ -57,7 +58,7 @@ class AP(models.Model):
 		html = q('.tabPanelLeft .avgRating span').text()
 		matches = match(r'^([\d.]+) out of', html)
 		if matches:
-			self.rating = float(matches.groups()[0])
+			self.rating = Decimal(matches.groups()[0])
 		# Sometimes there aren't enough ratings yet to provide an average.
 		else:
 			self.rating = None

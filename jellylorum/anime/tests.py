@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from anime.models import *
 
+from decimal import Decimal
 from django.test import TestCase
 
 class APTest(TestCase):
@@ -48,7 +49,7 @@ class APTest(TestCase):
 		self.assertEqual(2006, self.ysbl.endDate.year)
 	
 	def test_correct_rating(self):
-		self.assertEqual(4.373, self.knt.rating)
+		self.assertEqual(Decimal('4.373'), self.knt.rating)
 		self.assertEqual(None, self.ysbl.rating)
 	
 	def test_correct_description(self):
