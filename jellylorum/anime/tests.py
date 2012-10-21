@@ -84,6 +84,15 @@ class AniDBTest(TestCase):
 	def test_correct_type(self):
 		self.assertEqual('Web', self.gcg.type)
 		self.assertEqual('OVA', self.ktm.type)
+	
+	def test_correct_votes(self):
+		self.assertEqual(Decimal('5.41'), self.gcg.temporaryRating)
+		self.assertEqual(None, self.gcg.permanentRating)
+		self.assertEqual(None, self.gcg.reviewRating)
+		
+		self.assertEqual(None, self.ktm.temporaryRating)
+		self.assertEqual(Decimal('4.45'), self.ktm.permanentRating)
+		self.assertEqual(None, self.ktm.reviewRating)
 
 	def test_correct_number_of_episodes(self):
 		self.assertEqual(2, self.gcg.episodeCount)

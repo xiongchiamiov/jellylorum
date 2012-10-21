@@ -71,6 +71,9 @@ class AniDB(models.Model):
 	id = models.PositiveIntegerField(primary_key=True)
 	title = models.CharField(max_length=128)
 	type = models.CharField(max_length=30, choices=TYPE_CHOICES)
+	temporaryRating = models.DecimalField(max_digits=4, decimal_places=2, blank=True, null=True, default=None)
+	permanentRating = models.DecimalField(max_digits=4, decimal_places=2, blank=True, null=True, default=None)
+	reviewRating = models.DecimalField(max_digits=4, decimal_places=2, blank=True, null=True, default=None)
 	episodeCount = models.PositiveSmallIntegerField()
 	startDate = models.DateField(blank=True, null=True, default=None)
 	endDate = models.DateField(blank=True, null=True, default=None)
@@ -90,6 +93,22 @@ class AniDB(models.Model):
 			if title.get('type') == 'main':
 				self.title = title.text
 				break
+		
+		temporaryRating = doc.find('ratings').find('temporary')
+		if temporaryRating is not None:
+			self.temporaryRating = Decimal(temporaryRating.text)
+		else:
+			self.temporaryRating = None
+		permanentRating = doc.find('ratings').find('permanent')
+		if permanentRating is not None:
+			self.permanentRating = Decimal(permanentRating.text)
+		else:
+			self.permanentRating = None
+		reviewRating = doc.find('ratings').find('review')
+		if reviewRating is not None:
+			self.reviewRating = Decimal(reviewRating.text)
+		else:
+			self.reviewRating = None
 
 		self.type = doc.find('type').text
 		self.episodeCount = int(doc.find('episodecount').text)
