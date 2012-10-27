@@ -80,6 +80,7 @@ class AniDB(models.Model):
 	website = models.CharField(max_length=128, blank=True, null=True, default=None)
 	description = models.TextField()
 	categories = models.CharField(max_length=1024, blank=True, null=True, default=None)
+	tags = models.CharField(max_length=1024, blank=True, null=True, default=None)
 
 	def update(self):
 		url = 'http://api.anidb.net:9001/httpapi?request=anime&client=jellylorum&clientver=1&protover=1&aid=%s' % self.id
@@ -143,12 +144,18 @@ class AniDB(models.Model):
 		# that's what the source sites are for.  Implementing categories like
 		# this helps keep the project in scope and reduces complexity.
 		categories = []
-		for category in doc.find('categories'):
+		for category in doc.find('categories') or []:
 			categories.append(category.find('name').text)
 		# The API doesn't seem to return categories in any particular order.
 		# Perhaps we should sort by weight, then alphabetical?
 		categories.sort()
 		self.categories = ', '.join(categories)
+
+		tags = []
+		for tag in doc.find('tags') or []:
+			tags.append(tag.find('name').text)
+		tags.sort()
+		self.tags = ', '.join(tags)
 		
 		self.save()
 	

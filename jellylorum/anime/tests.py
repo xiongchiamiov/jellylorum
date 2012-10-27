@@ -121,6 +121,11 @@ class AniDBTest(TestCase):
 		                 self.gcg.categories)
 		self.assertEqual('18 Restricted, Historical, Japan, Nudity, Past, Sex, Virgins',
 		                 self.ktm.categories)
+	
+	def test_correct_tags(self):
+		self.assertEqual('animal perspective, female protagonist, moe',
+		                 self.gcg.tags)
+		self.assertEqual('', self.ktm.tags)
 
 class ANNTest(TestCase):
 	@classmethod
