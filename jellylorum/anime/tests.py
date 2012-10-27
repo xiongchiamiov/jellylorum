@@ -86,12 +86,12 @@ class AniDBTest(TestCase):
 		self.assertEqual('OVA', self.ktm.type)
 	
 	def test_correct_votes(self):
-		self.assertEqual(Decimal('5.41'), self.gcg.temporaryRating)
-		self.assertEqual(None, self.gcg.permanentRating)
+		self.assertEqual(Decimal('5.41'), self.gcg.rawAverageRating)
+		self.assertEqual(Decimal('2.07'), self.gcg.weightedAverageRating)
 		self.assertEqual(None, self.gcg.reviewRating)
 		
-		self.assertEqual(None, self.ktm.temporaryRating)
-		self.assertEqual(Decimal('4.45'), self.ktm.permanentRating)
+		self.assertEqual(Decimal('4.45'), self.ktm.rawAverageRating)
+		self.assertEqual(Decimal('4.49'), self.ktm.weightedAverageRating)
 		self.assertEqual(None, self.ktm.reviewRating)
 
 	def test_correct_number_of_episodes(self):

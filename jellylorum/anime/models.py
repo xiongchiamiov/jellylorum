@@ -71,8 +71,8 @@ class AniDB(models.Model):
 	id = models.PositiveIntegerField(primary_key=True)
 	title = models.CharField(max_length=128)
 	type = models.CharField(max_length=30, choices=TYPE_CHOICES)
-	temporaryRating = models.DecimalField(max_digits=4, decimal_places=2, blank=True, null=True, default=None)
-	permanentRating = models.DecimalField(max_digits=4, decimal_places=2, blank=True, null=True, default=None)
+	rawAverageRating = models.DecimalField(max_digits=4, decimal_places=2, blank=True, null=True, default=None)
+	weightedAverageRating = models.DecimalField(max_digits=4, decimal_places=2, blank=True, null=True, default=None)
 	reviewRating = models.DecimalField(max_digits=4, decimal_places=2, blank=True, null=True, default=None)
 	episodeCount = models.PositiveSmallIntegerField()
 	startDate = models.DateField(blank=True, null=True, default=None)
@@ -94,16 +94,19 @@ class AniDB(models.Model):
 				self.title = title.text
 				break
 		
-		temporaryRating = doc.find('ratings').find('temporary')
-		if temporaryRating is not None:
-			self.temporaryRating = Decimal(temporaryRating.text)
+		# The 'temporary' and 'permanent' fields now mean different things than
+		# their names imply.
+		# http://anidb.net/perl-bin/animedb.pl?show=cmt&id=45058
+		rawAverageRating = doc.find('ratings').find('temporary')
+		if rawAverageRating is not None:
+			self.rawAverageRating = Decimal(rawAverageRating.text)
 		else:
-			self.temporaryRating = None
-		permanentRating = doc.find('ratings').find('permanent')
-		if permanentRating is not None:
-			self.permanentRating = Decimal(permanentRating.text)
+			self.rawAverageRating = None
+		weightedAverageRating = doc.find('ratings').find('permanent')
+		if weightedAverageRating is not None:
+			self.weightedAverageRating = Decimal(weightedAverageRating.text)
 		else:
-			self.permanentRating = None
+			self.weightedAverageRating = None
 		reviewRating = doc.find('ratings').find('review')
 		if reviewRating is not None:
 			self.reviewRating = Decimal(reviewRating.text)

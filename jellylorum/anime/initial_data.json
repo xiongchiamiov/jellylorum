@@ -31,12 +31,12 @@
             "endDate": "2010-03-31", 
             "description": "* Based on a shoujo manga by http://anidb.net/cr7048 [Shiina Karuho], serialised in Bessatsu Margaret.\nhttp://anidb.net/ch11135 [Kuronuma Sawako] is the perfect heroine... for a horror movie. With her jet-black hair, sinister smile and silent demeanour, she`s often mistaken for the haunting movie character Sadako. But behind her scary fa\u00e7ade is a very misunderstood teenager. Too shy to fit in, all she wants to do is make some friends. But when a popular boy in class befriends her, she`s sure to make more than just that--she`s about to make some enemies too!\nSource: Manga-Updates", 
             "title": "Kimi ni Todoke", 
-            "permanentRating": null, 
             "episodeCount": 25, 
             "anime": 1, 
-            "reviewRating": null, 
-            "type": "TV Series", 
-            "temporaryRating": null
+            "weightedAverageRating": "8.13", 
+            "reviewRating": "7.63", 
+            "rawAverageRating": "8.46", 
+            "type": "TV Series"
         }
     }, 
     {
