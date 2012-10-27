@@ -79,6 +79,7 @@ class AniDB(models.Model):
 	endDate = models.DateField(blank=True, null=True, default=None)
 	website = models.CharField(max_length=128, blank=True, null=True, default=None)
 	description = models.TextField()
+	categories = models.CharField(max_length=1024, blank=True, null=True, default=None)
 
 	def update(self):
 		url = 'http://api.anidb.net:9001/httpapi?request=anime&client=jellylorum&clientver=1&protover=1&aid=%s' % self.id
@@ -127,6 +128,27 @@ class AniDB(models.Model):
 		endDate = doc.find('enddate')
 		self.startDate = self.parseDate(startDate)
 		self.endDate = self.parseDate(endDate)
+		
+		# My inner DBA is cringing as I write this, and should yours.  But hold
+		# on for a minute while I explain.
+		# All of the nice Django extensions for doing "tags" use many-to-many
+		# relationships, at their heart.  Go ahead, look through the source of
+		# django-tagging and django-taggit.  Performing M2Ms when you don't
+		# have to is a Bad Thing.
+		# And I really don't have to.  Serializing data like this means we
+		# can't query on it - but that's ok.  It means it's difficult to
+		# present it in any other way than a single string - but that's ok.
+		# All this project is ever intended to do is display information on a
+		# particular show - *not* to provide ways to browse for new shows;
+		# that's what the source sites are for.  Implementing categories like
+		# this helps keep the project in scope and reduces complexity.
+		categories = []
+		for category in doc.find('categories'):
+			categories.append(category.find('name').text)
+		# The API doesn't seem to return categories in any particular order.
+		# Perhaps we should sort by weight, then alphabetical?
+		categories.sort()
+		self.categories = ', '.join(categories)
 		
 		self.save()
 	

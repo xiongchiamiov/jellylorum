@@ -115,6 +115,12 @@ class AniDBTest(TestCase):
 		                 self.gcg.description)
 		self.assertEqual('An erotic version of the classical Japanese folktale The Tale of the Bamboo Cutter, produced by Tokyo Studio.',
 		                 self.ktm.description)
+	
+	def test_correct_categories(self):
+		self.assertEqual('4-koma, Anthropomorphism, Comedy, Cooking, Daily Life, Hokkaido, Manga, Present, Romance, Slapstick',
+		                 self.gcg.categories)
+		self.assertEqual('18 Restricted, Historical, Japan, Nudity, Past, Sex, Virgins',
+		                 self.ktm.categories)
 
 class ANNTest(TestCase):
 	@classmethod
