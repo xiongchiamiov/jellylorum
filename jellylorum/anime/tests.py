@@ -113,7 +113,7 @@ class AniDBTest(TestCase):
 	def test_correct_description(self):
 		self.assertEqual('A heartwarming story about a cockroach girl who tries to be liked by humans while dodging the insecticide.',
 		                 self.gcg.description)
-		self.assertEqual('An erotic version of the classical Japanese folktale "The Tale of the Bamboo Cutter", produced by Tokyo Studio.',
+		self.assertEqual('An erotic version of the classical Japanese folktale The Tale of the Bamboo Cutter, produced by Tokyo Studio.',
 		                 self.ktm.description)
 
 class ANNTest(TestCase):
