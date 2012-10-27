@@ -8,6 +8,7 @@ from pyquery import PyQuery
 from re import match
 from StringIO import StringIO
 from urllib2 import urlopen
+from warnings import simplefilter, resetwarnings
 
 class Anime(models.Model):
 	slug = models.SlugField()
@@ -144,6 +145,12 @@ class AniDB(models.Model):
 		# that's what the source sites are for.  Implementing categories like
 		# this helps keep the project in scope and reduces complexity.
 		categories = []
+		
+		# ElementTree causes a FutureWarning when we try and use an Element as
+		# a boolean; working around this, however, makes the short-circuit not
+		# work.  So just ignore warnings for a bit.
+		simplefilter('ignore')
+		
 		for category in doc.find('categories') or []:
 			categories.append(category.find('name').text)
 		# The API doesn't seem to return categories in any particular order.
@@ -156,6 +163,8 @@ class AniDB(models.Model):
 			tags.append(tag.find('name').text)
 		tags.sort()
 		self.tags = ', '.join(tags)
+		
+		resetwarnings()
 		
 		self.save()
 	
