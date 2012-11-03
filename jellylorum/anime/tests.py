@@ -165,6 +165,9 @@ class ANNTest(TestCase):
 	def test_correct_genres(self):
 		self.assertEqual(u'comedy, romance, slice of life', self.knt.genres)
 	
+	def test_correct_themes(self):
+		self.assertEqual(u'school', self.knt.themes)
+	
 	def test_correct_description(self):
 		self.assertEqual(u"Sawako Kuronuma's one wish in life is to make friends. That's a difficult proposition when everyone who meets her cowers in terror, due to her resemblance to Sadako (after whom they nickname her) from the Japanese horror movie series The Ring . Shunned by her classmates, her life starts to change after she befriends her classmate, Shōta Kazehaya, a popular, easygoing and 100% refreshing guy who is nice with everyone, even with her.",
 		                self.knt.description)

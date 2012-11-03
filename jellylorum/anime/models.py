@@ -198,6 +198,7 @@ class ANN(models.Model):
 	startDate = models.DateField()
 	endDate = models.DateField(blank=True, null=True, default=None)
 	genres = models.CharField(max_length=1024, blank=True, null=True, default=None)
+	themes = models.CharField(max_length=1024, blank=True, null=True, default=None)
 	description = models.TextField()
 
 	def update(self):
@@ -222,6 +223,8 @@ class ANN(models.Model):
 				# See note in AniDB.update() about categories and why this is a
 				# string.
 				self.genres = info.replace('Genres: ', '').replace(' ,', ',')
+			elif info.startswith('Themes: '):
+				self.themes = info.replace('Themes: ', '').replace(' ,', ',')
 
 		self.save()
 
