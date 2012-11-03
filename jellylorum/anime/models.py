@@ -30,6 +30,7 @@ class AP(models.Model):
 	startDate = models.DateField(blank=True, null=True, default=None)
 	endDate = models.DateField(blank=True, null=True, default=None)
 	rating = models.DecimalField(max_digits=4, decimal_places=3, blank=True, null=True, default=None)
+	rank = models.PositiveSmallIntegerField(blank=True, null=True, default=None)
 	description = models.TextField()
 
 	def update(self):
@@ -63,6 +64,10 @@ class AP(models.Model):
 		# Sometimes there aren't enough ratings yet to provide an average.
 		else:
 			self.rating = None
+		
+		self.rank = q('.tabPanelLeft .rank').text()
+		if self.rank is not None:
+			self.rank = int(self.rank.replace('#', ''))
 
 		self.save()
 

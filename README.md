@@ -34,7 +34,7 @@ Since I always forget.
 
 * Grab more information from sources.
   * ~~AniDB~~
-  * A-P
+  * ~~A-P~~
   * ANN
 * Add searching.
 * Refetch when data's too stale.
