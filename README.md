@@ -33,6 +33,9 @@ Since I always forget.
 # TODO #
 
 * Grab more information from sources.
+  * ~~AniDB~~
+  * A-P
+  * ANN
 * Add searching.
 * Refetch when data's too stale.
 * And update via AJAX.
