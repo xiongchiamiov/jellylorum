@@ -197,6 +197,7 @@ class ANN(models.Model):
 	episodeCount = models.PositiveSmallIntegerField()
 	startDate = models.DateField()
 	endDate = models.DateField(blank=True, null=True, default=None)
+	genres = models.CharField(max_length=1024, blank=True, null=True, default=None)
 	description = models.TextField()
 
 	def update(self):
@@ -217,6 +218,10 @@ class ANN(models.Model):
 				self.endDate = datetime.strptime(endDate, '%Y-%m-%d')
 			elif info.startswith('Plot Summary'):
 				self.description = match(r'Plot Summary: (.*)', info).groups()[0]
+			elif info.startswith('Genres: '):
+				# See note in AniDB.update() about categories and why this is a
+				# string.
+				self.genres = info.replace('Genres: ', '').replace(' ,', ',')
 
 		self.save()
 
