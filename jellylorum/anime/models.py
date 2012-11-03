@@ -32,6 +32,7 @@ class AP(models.Model):
 	rating = models.DecimalField(max_digits=4, decimal_places=3, blank=True, null=True, default=None)
 	rank = models.PositiveSmallIntegerField(blank=True, null=True, default=None)
 	description = models.TextField()
+	tags = models.CharField(max_length=1024, blank=True, null=True, default=None)
 
 	def update(self):
 		q = PyQuery(url='http://www.anime-planet.com/anime/'+self.slug)
@@ -68,6 +69,11 @@ class AP(models.Model):
 		self.rank = q('.tabPanelLeft .rank').text()
 		if self.rank is not None:
 			self.rank = int(self.rank.replace('#', ''))
+		
+		# See note in AniDB.update() about categories and why this is a string.
+		self.tags = q('.entryContent .categories ul').eq(0).text()
+		if self.tags is not None:
+			self.tags = self.tags.replace(' ,', ',')
 
 		self.save()
 
