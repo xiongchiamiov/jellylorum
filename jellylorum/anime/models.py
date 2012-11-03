@@ -199,6 +199,7 @@ class ANN(models.Model):
 	endDate = models.DateField(blank=True, null=True, default=None)
 	genres = models.CharField(max_length=1024, blank=True, null=True, default=None)
 	themes = models.CharField(max_length=1024, blank=True, null=True, default=None)
+	objectionableContent = models.CharField(max_length=30, blank=True, null=True, default=None)
 	description = models.TextField()
 
 	def update(self):
@@ -225,6 +226,8 @@ class ANN(models.Model):
 				self.genres = info.replace('Genres: ', '').replace(' ,', ',')
 			elif info.startswith('Themes: '):
 				self.themes = info.replace('Themes: ', '').replace(' ,', ',')
+			elif info.startswith('Objectionable content: '):
+				self.objectionableContent = info.replace('Objectionable content: ', '')
 
 		self.save()
 
