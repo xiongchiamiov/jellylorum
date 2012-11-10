@@ -70,7 +70,7 @@ Since I always forget.
   * ~~AniDB~~
   * ~~A-P~~
   * ANN
-* Add searching.
+* Add searching using [Haystack](http://haystacksearch.org/).
 * Refetch when data's too stale.
 * And update via AJAX.
 * Figure out how we're going to get the database populated.
