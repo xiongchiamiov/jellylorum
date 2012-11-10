@@ -40,6 +40,7 @@ conveniently large links at the top of every anime page.
 
 # Requirements #
 
+* A relatively recent version of Python 2.x.  I develop and deploy on 2.6.
 * [virtualenv]
 
 [virtualenv]: http://pypi.python.org/pypi/virtualenv
