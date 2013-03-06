@@ -13,7 +13,16 @@ because I have no intention of ever hurting myself by attempting to use Windows
 as a web server.  I know a great many people do, but they're not me, and
 they're not writing this.  So there.
 
-# Fetching Data #
+# Overview #
+
+There are two primary operations in Jellylorum: data gathering and data
+display.  They are intentionally kept separate because similar sites that start
+off with them mixed, like [Reddit Investigator], have serious performance issues
+(read: they take multiple minutes to return data to the user).
+
+[Reddit Investigator]: http://www.redditinvestigator.com/
+
+# Data Gathering #
 
 ## AniDB ##
 
