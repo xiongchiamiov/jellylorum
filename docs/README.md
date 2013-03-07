@@ -78,3 +78,14 @@ if we can't reduce the [MTBF], we can at least tackle [MTTR].
 **Anime News Network** (ANN) is handled pretty much like A-P.  Scrape, parse,
 save.
 
+# Data Display #
+
+## Finding the data you want ##
+
+Currently, [the main anime page] displays a list of all the anime we know about;
+clicking on one will lead you to the detail page.
+
+Future plans include using [Haystack] to generate search results.
+
+[the main anime page]: http://ani.pe/dia/anime/
+[Haystack]: http://haystacksearch.org/
