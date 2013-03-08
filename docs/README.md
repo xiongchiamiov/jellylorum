@@ -78,6 +78,36 @@ if we can't reduce the [MTBF], we can at least tackle [MTTR].
 **Anime News Network** (ANN) is handled pretty much like A-P.  Scrape, parse,
 save.
 
+## Tying them all together ##
+
+This is perhaps the most interesting part of the project.
+
+AniDB maintains a set of links between their entries and ANN's; unfortunately,
+this is currently only available via the UDP API (see above).  This data is
+curated by their detail-obsessed userbase (I have more edits to my credit than
+I wish to make public), which is likely more accurate than any algorithm we
+can determine.
+
+AniDB *used* to also have user-facing links to the corresponding A-P pages; however, some... drama prompted them to remove these.  They still have some data available via the UDP API, but it's old and severely out-of-date, enough that we shouldn't use it at all.
+
+Neither of the other sites provides links between their content and the other sites', or any other sites', for that matter.
+
+There are, generically, two methods for gaining the required data - algorithmically  and human-generated.
+
+### Human-generated ###
+
+We certainly want to give users the ability to add links; any algorithmic solution will be imperfect, and users will gladly spend a small amount of their time fixing issues that directly affect them.
+
+An almost entirely blank database is a terrible thing to greet users with on a launch, however, so we cannot rely entirely upon user volunteerism.
+
+One option I've considered is paying [Amazon Turk] users a small fee to produce the initial set of linkings.  I'm not sure I wish to front enough money for a decent set, and more importantly, I'm attempting to get senior project credit for this, and I apparently did not spend five years in school to learn how to pay other people to do my work for me.
+
+[Amazon Turk]: https://www.mturk.com/mturk/welcome
+
+### Algorithmically ###
+
+I'm not sure yet.
+
 # Data Display #
 
 ## Finding the data you want ##
@@ -90,7 +120,7 @@ Future plans include using [Haystack] to generate search results.
 [the main anime page]: http://ani.pe/dia/anime/
 [Haystack]: http://haystacksearch.org/
 
-## Displaying Details ##
+## Displaying details ##
 
 Right now, Jellylorum just spits a bunch of cached data out onto the screen.
 This is both ugly and almost entirely unhelpful.
