@@ -1,6 +1,6 @@
 # The Basics #
 
-Jellylorum is written in Python, using the Django framework.  I think Python is
+Jellylorum is written in [Python], using [the Django framework].  I think Python is
 a language excellently-oriented towards maintainability, and that Django
 follows well in those footsteps (and has, hands-down, the best documentation
 I've ever seen), but really, like most technical decisions, it comes down to
@@ -12,6 +12,9 @@ Similarly, there is no attempt to make sure this project works on Windows,
 because I have no intention of ever hurting myself by attempting to use Windows
 as a web server.  I know a great many people do, but they're not me, and
 they're not writing this.  So there.
+
+[Python]: http://xkcd.com/353/
+[the Django framework]: https://www.djangoproject.com/
 
 # Overview #
 
