@@ -89,3 +89,20 @@ Future plans include using [Haystack] to generate search results.
 
 [the main anime page]: http://ani.pe/dia/anime/
 [Haystack]: http://haystacksearch.org/
+
+## Displaying Details ##
+
+Right now, Jellylorum just spits a bunch of cached data out onto the screen.
+This is both ugly and almost entirely unhelpful.
+
+In the future, if the data we have stored is determined to be too stale (say, 1 day
+since it's been updated), the old data will still be sent to the client for direct
+consumption.  A background job will be queued to update the data, and if any changes
+are present, we'll push them in via AJAX.
+
+I'd like to give users some amount of customization as to what data is available on
+the page.  This requires user accounts, a backend for saving preferred views, the
+front-end logic for implementing it, and some way of changing your preferences,
+either in control panel form or edit controls directly on the view page.  This idea
+is not fully formed yet; the description here is deliberately vague pending designer
+consultation and usability prototyping.
