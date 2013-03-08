@@ -89,6 +89,8 @@ save.
 
 This is perhaps the most interesting part of the project.
 
+[AniDB makes][title dump] a data-dump of their entire list of anime titles, every day.  This provides a fantastic starting point.
+
 AniDB maintains a set of links between their entries and ANN's; unfortunately,
 this is currently only available via the UDP API (see above).  This data is
 curated by their detail-obsessed userbase (I have more edits to my credit than
@@ -100,6 +102,8 @@ AniDB *used* to also have user-facing links to the corresponding A-P pages; howe
 Neither of the other sites provides links between their content and the other site's, or any other sites', for that matter.
 
 There are, generically, two methods for gaining the required data - algorithmically  and human-generated.
+
+[title dump]: http://wiki.anidb.info/w/API#Anime_Titles
 
 ### Human-generated ###
 
