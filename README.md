@@ -31,7 +31,7 @@ absolutely no reason for me to re-invent it.  Jellylorum is instead intended to
 be the starting point for browsing to other sites, which is why there are
 conveniently large links at the top of every anime page.
 
-For more information on how Jellylorum is actually construced, take a look at
+For more information on how Jellylorum is actually constructed, take a look at
 [the docs](docs/).
 
 [AniDB]: http://anidb.net
