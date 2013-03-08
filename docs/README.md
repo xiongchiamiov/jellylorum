@@ -117,7 +117,7 @@ One option I've considered is paying [Amazon Turk] users a small fee to produce 
 
 ### Algorithmically ###
 
-I'm not sure yet.
+A-P's search returns a 302 redirect if only one result is found, but displays a list of results otherwise.  We can perhaps leverage the information gathered from the other two sources to fill in enough fields in the advanced search parameters to get an acceptably-high single-response rate.
 
 # Data Display #
 
