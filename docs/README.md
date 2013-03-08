@@ -97,7 +97,7 @@ can determine.
 
 AniDB *used* to also have user-facing links to the corresponding A-P pages; however, some... drama prompted them to remove these.  They still have some data available via the UDP API, but it's old and severely out-of-date, enough that we shouldn't use it at all.
 
-Neither of the other sites provides links between their content and the other sites', or any other sites', for that matter.
+Neither of the other sites provides links between their content and the other site's, or any other sites', for that matter.
 
 There are, generically, two methods for gaining the required data - algorithmically  and human-generated.
 
