@@ -120,6 +120,10 @@ We certainly want to give users the ability to add links; any algorithmic
 solution will be imperfect, and users will gladly spend a small amount of their
 time fixing issues that directly affect them.
 
+This, of course, will require the creation of a moderation system, in which
+users' changes are not saved immediately, but put into a queue that admins have
+to approve.  Diff engine, did you say?
+
 An almost entirely blank database is a terrible thing to greet users with on a
 launch, however, so we cannot rely entirely upon user volunteerism.
 
