@@ -49,12 +49,14 @@ class APTest(TestCase):
 		self.assertEqual(2006, self.ysbl.endDate.year)
 	
 	def test_correct_rating(self):
-		self.assertEqual(Decimal('4.373'), self.knt.rating)
-		self.assertEqual(None, self.ysbl.rating)
+		self.assertEqual(Decimal('4.369'), self.knt.rating)
+		# TODO: Find another show with no rating.
+		self.assertEqual(Decimal('1.378'), self.ysbl.rating)
 	
 	def test_correct_rank(self):
-		self.assertEqual(136, self.knt.rank)
-		self.assertEqual(None, self.ysbl.rank)
+		self.assertEqual(142, self.knt.rank)
+		# TODO: Find another show with no rating (and thus no rank).
+		self.assertEqual(4720, self.ysbl.rank)
 	
 	def test_correct_description(self):
 		self.assertEqual(u"Sawako Kuronuma is just like any other high school girl who wants to make friends and be useful. The only problem is she bears a worrying resemblance to Sadako from 'The Ring!' Because of her reputation, people are not only terrified of her, but small dogs even bark in fear at her presence; in fact, the only person in school who will talk to her is the lively class hottie, Kazehaya. As the pair spends more time together, Kazehaya slowly begins to bring Sawako out of her shell and soon their feelings for each other develop further. Though with her crippling insecurities, lack of social skills, and a series of cruel rumors and misunderstandings, it seems that Sawako's dream of a normal life won’t be quite so easy to obtain.",
@@ -62,7 +64,7 @@ class APTest(TestCase):
 		self.assertEqual(u"No synopsis yet - check back soon!", self.ysbl.description)
 	
 	def test_correct_tags(self):
-		self.assertEqual('Drama, Romance, Shoujo, Comedy, School Life',
+		self.assertEqual('Comedy, Drama, Romance, Shoujo, School Life',
 		                 self.knt.tags)
 		self.assertEqual(None, self.ysbl.tags)
 
@@ -95,9 +97,9 @@ class AniDBTest(TestCase):
 		self.assertEqual('OVA', self.ktm.type)
 	
 	def test_correct_votes(self):
-		self.assertAlmostEqual(5.41, float(self.gcg.rawAverageRating),
+		self.assertAlmostEqual(5.72, float(self.gcg.rawAverageRating),
 		                       delta=0.35)
-		self.assertAlmostEqual(2.07, float(self.gcg.weightedAverageRating),
+		self.assertAlmostEqual(2.79, float(self.gcg.weightedAverageRating),
 		                       delta=0.35)
 		self.assertEqual(None, self.gcg.reviewRating)
 		
@@ -132,11 +134,11 @@ class AniDBTest(TestCase):
 	def test_correct_categories(self):
 		self.assertEqual('4-koma, Anthropomorphism, Comedy, Cooking, Daily Life, Hokkaido, Manga, Present, Romance, Slapstick',
 		                 self.gcg.categories)
-		self.assertEqual('18 Restricted, Historical, Japan, Nudity, Past, Sex, Virgins',
+		self.assertEqual('18 Restricted, Historical, Japan, Nudity, Past, Sex, Virgin',
 		                 self.ktm.categories)
 	
 	def test_correct_tags(self):
-		self.assertEqual('animal perspective, female protagonist, moe',
+		self.assertEqual('animal perspective, female protagonist, for mobile phone, moe',
 		                 self.gcg.tags)
 		self.assertEqual('', self.ktm.tags)
 
