@@ -68,7 +68,7 @@ class AP(models.Model):
 		
 		self.rank = q('.tabPanelLeft .rank').text()
 		if self.rank is not None:
-			self.rank = int(self.rank.replace('#', ''))
+			self.rank = int(self.rank.replace('#', '').replace(',', ''))
 		
 		# See note in AniDB.update() about categories and why this is a string.
 		self.tags = q('.entryContent .categories ul').eq(0).text()
