@@ -2,16 +2,42 @@ import sys
 from datetime import datetime
 from decimal import Decimal
 from django.db import models
+from httplib import HTTPConnection
 from gzip import GzipFile
 from lxml import etree
 from pyquery import PyQuery
 from re import match
 from StringIO import StringIO
-from urllib2 import urlopen
+from urllib2 import urlopen, quote
 from warnings import simplefilter, resetwarnings
 
 class Anime(models.Model):
 	slug = models.SlugField()
+	
+	def linkAP(self):
+		'''
+		Try to figure out the appropriate A-P entry, given a pre-existing AniDB
+		entry.
+		'''
+		# urllib2 automatically follows 302s, which makes life difficult.  The
+		# documentation also sucks ass, so I spent a good hour trying to
+		# determine how to get headers out of it.  Fuck that, we'll do it
+		# old-school.
+		connection = HTTPConnection('www.anime-planet.com')
+		path = '/anime/all?name=%s&filter_mode=anime&year=%s' % \
+		       (quote(self.anidb.title), self.anidb.startDate.year)
+		connection.request('HEAD', path)
+		response = connection.getresponse()
+		connection.close()
+		
+		# If there are multiple responses from the search, we'll just give up and
+		# make someone do it manually.
+		if response.status != 302:
+			return
+		
+		self.ap = AP()
+		self.ap.slug = response.getheader('Location').replace('/anime/', '')
+		self.ap.save()
 
 TYPE_CHOICES = (
 	('TV', 'TV'),

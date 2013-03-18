@@ -4,6 +4,34 @@ from anime.models import *
 from decimal import Decimal
 from django.test import TestCase
 
+class AnimeTest(TestCase):
+	@classmethod
+	def setUpClass(cls):
+		cls.gcg = Anime()
+		cls.gcg.save()
+		cls.fma = Anime()
+		cls.fma.save()
+		
+		anidb = AniDB()
+		anidb.id = 9434
+		anidb.anime = cls.gcg
+		anidb.update()
+		
+		anidb2 = AniDB()
+		anidb2.id = 6107
+		anidb2.anime = cls.fma
+		anidb2.update()
+	
+	def test_ap_linking(self):
+		self.gcg.linkAP()
+		self.assertEqual('gokicha-cockroach-girls', self.gcg.ap.slug)
+		
+		self.fma.linkAP()
+		# The second parameter to assertRaises needs to strictly be a callable -
+		# if we don't wrap the variable access in a lambda, it doesn't catch the
+		# exception.
+		self.assertRaises(AP.DoesNotExist, lambda: self.fma.ap)
+
 class APTest(TestCase):
 	@classmethod
 	def setUpClass(cls):
