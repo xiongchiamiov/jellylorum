@@ -104,9 +104,14 @@ class AniDB(models.Model):
 		doc = etree.fromstring(xml)
 		
 		for title in doc.find('titles'):
-			if title.get('type') == 'main':
+			# Prefer official English titles if they exist.
+			if title.get('type') == 'official' and \
+			   title.get('{http://www.w3.org/XML/1998/namespace}lang') == 'en':
 				self.title = title.text
 				break
+			# But fall back to the 'main' title.
+			if title.get('type') == 'main':
+				self.title = title.text
 		
 		# The 'temporary' and 'permanent' fields now mean different things than
 		# their names imply.
