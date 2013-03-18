@@ -33,11 +33,16 @@ class Anime(models.Model):
 		# If there are multiple responses from the search, we'll just give up and
 		# make someone do it manually.
 		if response.status != 302:
-			return
+			return False
 		
 		self.ap = AP()
 		self.ap.slug = response.getheader('Location').replace('/anime/', '')
 		self.ap.save()
+		
+		self.slug = self.ap.slug
+		self.save()
+		
+		return True
 
 TYPE_CHOICES = (
 	('TV', 'TV'),
