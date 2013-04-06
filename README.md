@@ -41,6 +41,21 @@ For more information on how Jellylorum is actually constructed, take a look at
 [MAL]: http://myanimelist.net/
 [Ani.PE(dia)]: http://ani.pe/dia/anime/
 
+# Roadmap #
+
+* ~~Grab information from sources.~~
+  * ~~AniDB~~
+  * ~~A-P~~
+  * ~~ANN~~
+* Get an initial data set.
+  * ~~Pull a list of titles from AniDB.~~
+  * Automagically create links to the other sources.
+* Add searching using [Haystack](http://haystacksearch.org/).
+* Refetch when data's too stale.
+* And update via AJAX.
+* Make the UI usable and not ugly.
+* User accounts for customization?
+
 # Requirements #
 
 * A relatively recent version of Python 2.x.  I develop and deploy on 2.6.
@@ -67,19 +82,4 @@ Since I always forget.
 	$> ./manage.py schemamigration --auto anime
 	$> ./manage.py migrate
 	$> ./manage.py dumpdata anime --indent=4 > anime/initial_data.json
-
-# Roadmap #
-
-* ~~Grab information from sources.~~
-  * ~~AniDB~~
-  * ~~A-P~~
-  * ~~ANN~~
-* Get an initial data set.
-  * ~~Pull a list of titles from AniDB.~~
-  * Automagically create links to the other sources.
-* Add searching using [Haystack](http://haystacksearch.org/).
-* Refetch when data's too stale.
-* And update via AJAX.
-* Make the UI usable and not ugly.
-* User accounts for customization?
 
