@@ -39,6 +39,8 @@ class APTest(TestCase):
 		anime.save()
 		anime2 = Anime()
 		anime2.save()
+		anime3 = Anime()
+		anime3.save()
 		
 		cls.knt = AP()
 		cls.knt.slug = 'kimi-ni-todoke'
@@ -50,6 +52,11 @@ class APTest(TestCase):
 		cls.ysbl.anime = anime2
 		cls.ysbl.update()
 		
+		cls.cots = AP()
+		cls.cots.slug = 'crest-of-the-stars-birth'
+		cls.cots.anime = anime3
+		cls.cots.update()
+		
 		cls.maxDiff = None
 
 	def test_correct_title(self):
@@ -59,6 +66,7 @@ class APTest(TestCase):
 	def test_correct_type(self):
 		self.assertEqual('TV', self.knt.type)
 		self.assertEqual('OVA', self.ysbl.type)
+		self.assertEqual('TV Special', self.cots.type)
 	
 	def test_correct_number_of_episodes(self):
 		self.assertEqual(25, self.knt.episodeCount)

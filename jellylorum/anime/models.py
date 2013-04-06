@@ -71,7 +71,7 @@ class AP(models.Model):
 		self.title = q('#anime .theme').text()
 
 		html = q('.tabPanelLeft .type').text()
-		(type, episodeCount) = match(r'^(\w+) \((\d+\+?)', html).groups()
+		(type, episodeCount) = match(r'^([\w ]+) \((\d+\+?)', html).groups()
 		self.type = type
 		self.episodeCount = int(episodeCount)
 
