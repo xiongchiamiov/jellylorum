@@ -83,3 +83,13 @@ Since I always forget.
 	$> ./manage.py migrate
 	$> ./manage.py dumpdata anime --indent=4 > anime/initial_data.json
 
+# Running Tests #
+
+All tests:
+
+	$> ./manage.py test
+
+A specific set of tests:
+
+	$> ./manage.py test anime.tests:APTest
+
