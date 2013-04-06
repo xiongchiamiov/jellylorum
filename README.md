@@ -70,14 +70,16 @@ Since I always forget.
 
 # Roadmap #
 
-* Grab more information from sources.
+* ~~Grab information from sources.~~
   * ~~AniDB~~
   * ~~A-P~~
-  * ANN
+  * ~~ANN~~
+* Get an initial data set.
+  * ~~Pull a list of titles from AniDB.~~
+  * Automagically create links to the other sources.
 * Add searching using [Haystack](http://haystacksearch.org/).
 * Refetch when data's too stale.
 * And update via AJAX.
-* Figure out how we're going to get the database populated.
 * Make the UI usable and not ugly.
 * User accounts for customization?
 
