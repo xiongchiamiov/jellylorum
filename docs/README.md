@@ -76,12 +76,12 @@ One downside of having tests that cover a variety of cases is high maintenance
 - some test suites have to cover currently-airing shows, and those will air
 more episodes (and finish airing!) on a regular basis.  For the time being, at
 least, I've accepted this as a necessary price for development security; in the
-future, they may end up commented out, for fear of [PHP syndrom].
+future, they may end up commented out, for fear of [PHP syndrome].
 
 [pyquery]: https://pypi.python.org/pypi/pyquery
 [MTBF]: http://en.wikipedia.org/wiki/MTBF
 [MTTR]: https://en.wikipedia.org/wiki/Mean_time_to_recovery
-[PHP syndrom]: http://gcov.php.net/viewer.php?version=PHP_5_4&func=tests
+[PHP syndrome]: http://gcov.php.net/viewer.php?version=PHP_5_4&func=tests
 
 ## Anime News Network ##
 
