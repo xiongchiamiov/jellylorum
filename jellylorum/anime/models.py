@@ -11,6 +11,9 @@ from StringIO import StringIO
 from urllib2 import urlopen, quote
 from warnings import simplefilter, resetwarnings
 
+class ScrapingException(Exception):
+	pass
+
 class Anime(models.Model):
 	slug = models.SlugField()
 	
@@ -133,6 +136,8 @@ class AniDB(models.Model):
 		xml = file.read()
 
 		doc = etree.fromstring(xml)
+		if doc.tag == 'error':
+			raise ScrapingException(doc.text)
 		
 		for title in doc.find('titles'):
 			# Prefer official English titles if they exist.
