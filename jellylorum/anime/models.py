@@ -60,7 +60,7 @@ class AP(models.Model):
 	title = models.CharField(max_length=255)
 	type = models.CharField(max_length=30, choices=TYPE_CHOICES)
 	episodeCount = models.PositiveSmallIntegerField()
-	studio = models.CharField(max_length=30)
+	studio = models.CharField(max_length=30, blank=True, null=True, default=None)
 	startDate = models.DateField(blank=True, null=True, default=None)
 	endDate = models.DateField(blank=True, null=True, default=None)
 	rating = models.DecimalField(max_digits=4, decimal_places=3, blank=True, null=True, default=None)
