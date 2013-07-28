@@ -129,6 +129,7 @@ INSTALLED_APPS = (
 	'django.contrib.admindocs',
 	'south',
 	'django_nose',
+	'haystack',
 	'anime',
 )
 
@@ -139,6 +140,13 @@ NOSE_ARGS = [
 	'--cover-package=anime.models',
 	'--nologcapture',
 ]
+
+HAYSTACK_CONNECTIONS = {
+	'default': {
+		'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+		'PATH': abs_path('dev.search_index'),
+	},
+}
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

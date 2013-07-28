@@ -50,7 +50,7 @@ For more information on how Jellylorum is actually constructed, take a look at
 * Get an initial data set.
   * ~~Pull a list of titles from AniDB.~~
   * Automagically create links to the other sources.
-* Add searching using [Haystack](http://haystacksearch.org/).
+* ~~Add searching using [Haystack](http://haystacksearch.org/).~~
 * Refetch when data's too stale.
 * And update via AJAX.
 * Make the UI usable and not ugly.
@@ -74,6 +74,7 @@ Since we're using virtualenv, everything's nice and easy.
 	$> ./manage.py syncdb
 	$> ./manage.py migrate
 	$> ./manage.py loaddata anime/initial_data.json
+	$> ./manage.py rebuild_index
 
 # Creating a Migration #
 

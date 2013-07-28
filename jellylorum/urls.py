@@ -16,11 +16,9 @@ urlpatterns = patterns('',
 	url(r'^$', redirect_to, {'url': '/dia/'}),
 	url(r'^dia/anime/$', ListView.as_view(model=Anime)),
 	url(r'^dia/anime/(?P<slug>[\w-]+)/$', 'anime.views.details'),
+	url(r'^dia/search/', include('haystack.urls')),
 
-	# Uncomment the admin/doc line below to enable admin documentation:
 	url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-	# Uncomment the next line to enable the admin:
 	url(r'^admin/', include(admin.site.urls)),
 )
 

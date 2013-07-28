@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block "title" %}Search{% endblock %}
+
+{% block "content" %}
+<form method="get" action=".">
+	<table>
+		{{ form.as_table }}
+		<tr>
+			<td>&nbsp;</td>
+			<td>
+				<input type="submit" value="Search" />
+			</td>
+		</tr>
+	</table>
+</form>
+
+{% if query %}
+	{% for result in page.object_list %}
+		<a href="/dia/anime/{{ result.object.slug }}">{{ result.object.slug }}</a><br />
+	{% empty %}
+		No results found.
+	{% endfor %}
+	
+	{% if page.has_previous or page.has_next %}
+		{% if page.has_previous %}
+			<a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">
+		{% endif %}
+		&laquo; Previous
+		{% if page.has_previous %}</a>{% endif %}
+		|
+		{% if page.has_next %}
+			<a href="?q={{ query }}&amp;page={{ page.next_page_number }}">
+		{% endif %}
+		Next &raquo;
+		{% if page.has_next %}</a>{% endif %}
+	{% endif %}
+{% endif %}
+{% endblock %}
+

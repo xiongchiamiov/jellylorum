@@ -1,2 +1,3 @@
 *.db
+*.search_index
 .coverage
