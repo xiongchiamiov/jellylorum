@@ -1,2 +1,13 @@
 {{ object.slug }}
+{{ object.ap.title }}
+{{ object.ap.studio }}
+{{ object.ap.description }}
+{{ object.ap.tags }}
+{{ object.anidb.title }}
+{{ object.anidb.description }}
+{{ object.anidb.categories }}
+{{ object.anidb.tags }}
+{{ object.ann.genres }}
+{{ object.ann.themes }}
+{{ object.ann.description }}
 
